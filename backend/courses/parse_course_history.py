@@ -33,7 +33,7 @@ def parse_course_history(text):
     # find the name
     rough_location = text.find('class="IS_BB_LINKS_MENU_DESKTOP"')
     rough_name_parse = text[rough_location+38:rough_location+38+20]
-    precise_name = rough_name_parse[:rough_name_parse.find('<')]
+    student_name = rough_name_parse[:rough_name_parse.find('<')]
 
     # update text
     text = text[rough_location:]
@@ -49,10 +49,12 @@ def parse_course_history(text):
     semester_dict = {}
     semester = None
 
+    # go through the lines
     i = 0
     while i < len(text):
         line = text[i]
 
+        # parse each semester
         if line[:4] == '<h3>':
             increment = 1
             semester = line[4:line.find('</')]
@@ -72,17 +74,4 @@ def parse_course_history(text):
 
         i += 1
 
-    return precise_name, gpa
-
-
-if __name__ == '__main__':
-    # Open the file in read mode ('r')
-    with open('./test.txt', 'r') as file:
-        # Read all lines into a list
-        file_contents = file.read()
-
-    parse_albert(file_contents)
-
-    # {'Fall 2022': [['Course Num', 'Course Name', 'Final Grade', 'Credits'], ['Course Num', 'Course Name', 'Final Grade'], ['Course Num', 'Course Name', 'Final Grade']]}
-    
-
+    return student_name, gpa, semester_dict
