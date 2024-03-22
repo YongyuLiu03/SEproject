@@ -4,15 +4,25 @@ from django.db import models
 
 class User(models.Model):
     netid = models.TextField(primary_key=True)
-    taken_courses = models.ManyToManyField(
-        "self",
-        related_name="taken_courses",
-        related_query_name="taken_course",
-        symmetrical=False
-    )
+    # taken_courses = models.ManyToManyField(
+    #     "self",
+    #     related_name="taken_courses",
+    #     related_query_name="taken_course",
+    #     symmetrical=False
+    # )
+    
 
 class TimeSlot(models.Model):
-    DAY_OF_WEEK_CHOICES = ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"]
+    DAY_OF_WEEK_CHOICES = [
+        ("MON", "Monday"),
+        ("TUE", "Tuesday"),
+        ("WED", "Wednesday"),
+        ("THU", "Thursday"),
+        ("FRI", "Friday"),
+        ("SAT", "Saturday"),
+        ("SUN", "Sunday"),
+    ]
+    # DAY_OF_WEEK_CHOICES = ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"]
     day_of_week = models.CharField(max_length=3, choices=DAY_OF_WEEK_CHOICES)
     start_time = models.TimeField()
     end_time = models.TimeField()
@@ -39,16 +49,26 @@ class Course(models.Model):
             times__start_time__gte=start_time, 
             times__end_time__lte=end_time
         ).distinct()
-    
+
 class TakenCourse(Course):
     semester = models.CharField(max_length=20)
     grade = models.CharField(max_length=2)
-
+    users = models.ManyToManyField(User, through='UserCourse', related_name='taken_courses')
+    
     def query_grade(self):
         return self.grade
 
     def query_semester(self):
         return self.semester
+    
+
+class UserCourse(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    course = models.ForeignKey(TakenCourse, on_delete=models.CASCADE)
+    grade = models.CharField(max_length=5)
+
+
+
 
 class CurrentSemesterCourse(Course):
 

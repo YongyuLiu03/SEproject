@@ -55,14 +55,18 @@ function App() {
             <table>
               <thead>
                 <tr>
-                  <th>Course Name</th>
+                  <th>Course number</th>
+                  <th>Course name</th>
+                  <th>Credit</th>
                   <th>Grade</th>
                 </tr>
               </thead>
               <tbody>
-                {courseList.map(([name, grade], index) => (
+                {courseList.map(([number, name, credit, grade], index) => (
                   <tr key={index}>
+                    <td>{number}</td>
                     <td>{name}</td>
+                    <td>{credit}</td>
                     <td>{grade}</td>
                   </tr>
                 ))}
