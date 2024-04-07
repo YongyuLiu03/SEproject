@@ -26,7 +26,10 @@ SECRET_KEY = 'django-insecure-&%v$5wk#$314^(w2tkv!sao&900ejwewgwbs$#ivapew3c(v#!
 DEBUG = True
 
 # for development
-CORS_ALLOW_ALL_ORIGINS = True 
+CORS_ALLOWED_ORIGINS = [ 
+    "http://localhost:3000" 
+    ]
+
 
 ALLOWED_HOSTS = []
 
@@ -41,8 +44,14 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'corsheaders',
+    'rest_framework',
+    'rest_framework.authtoken',
     'courses',
+    'myauth',
 ]
+
+# AUTH_USER_MODEL = 'django.contrib.auth.models.User'
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -73,6 +82,18 @@ TEMPLATES = [
     },
 ]
 
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework.authentication.TokenAuthentication',
+    ],
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
+    ),
+    
+}
+
+
+
 WSGI_APPLICATION = 'se_project.wsgi.application'
 
 
@@ -81,8 +102,12 @@ WSGI_APPLICATION = 'se_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'se_test',
+        'USER': 'lyy',
+        'PASSWORD': '030302',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
@@ -127,3 +152,5 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+TIME_INPUT_FORMATS = ('%H:%M',)
