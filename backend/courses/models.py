@@ -10,11 +10,12 @@ class Student(models.Model):
         JR = 3, "Junior"
         SR = 4, "Senior"
     
+    
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     student_id = models.AutoField(primary_key=True)
     # net_id = models.TextField(primary_key=True, max_length=10)
     # name = models.TextField(max_length=50)
-    levei_id = models.SmallIntegerField(choices=Level.choices)
+    level_id = models.SmallIntegerField(choices=Level.choices)
     major = models.ManyToManyField('Major', symmetrical=False, blank=True)
     credit = models.SmallIntegerField()
 
@@ -23,10 +24,10 @@ class Course(models.Model):
     course_id = models.TextField(primary_key=True, max_length=20)
     name = models.TextField(max_length=50)
     credit = models.IntegerField()
-    description = models.TextField(max_length=255)
+    description = models.TextField(max_length=255, blank=True)
     prereqs = models.ManyToManyField('Course', symmetrical=False, related_name='pre_req_of', blank=True)
-    times = models.ManyToManyField('Timeslot', related_name='courses')
-    majors = models.ManyToManyField('Major', related_name="courses")
+    times = models.ManyToManyField('Timeslot', related_name='courses', blank=True)
+    majors = models.ManyToManyField('Major', related_name="courses", blank=True)
     at_fall = models.BooleanField(default=True)
     at_spring = models.BooleanField(default=True)
 
@@ -42,7 +43,7 @@ class Student_taken_Course(models.Model):
 class Major(models.Model):
     major_id = models.AutoField(primary_key=True)
     name = models.TextField()
-    major = models.BooleanField(default=True)
+    is_major = models.BooleanField(default=True)
     
     def __str__(self) -> str:
         return self.name

@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'rest_framework.authtoken',
     'courses',
     'myauth',
+    'test',
 ]
 
 # AUTH_USER_MODEL = 'django.contrib.auth.models.User'

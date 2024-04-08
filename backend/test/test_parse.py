@@ -1,7 +1,7 @@
 import os
 import pdb
 
-from backend.courses import parse_course_history
+from courses import parse_course_history
 
 def compare_dictionaries(dict1, dict2):
     # Check if the keys are the same
