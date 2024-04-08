@@ -5,22 +5,35 @@ def parse_semester(semester, content):
 
     # iterate through lines
     for line in range(len(content)):
-        if '"Catalog Number"' in content[line]:
+        if '" accordion-row' in content[line]:
+            course_num, course_name, course_credits, course_grade = '', '', '', ''
+
+            cumu_info = 0
             # get the course number
-            course_num = content[line][88+len(semester)-1:]
-            course_num = course_num[:course_num.find("<")]
+            if 'Catalog Number' in content[line+1]:
+                course_num = content[line+1][88+len(semester)-1:-5]
+                cumu_info += 1
+                # course_num = course_num[:course_num.find("<")]
             
             # get the course name
-            course_name = content[line+1][71+len(semester)-1:]
-            course_name = course_name[:course_name.find("<")]
-
+            if 'Title' in content[line+2-(1-cumu_info)]:
+                course_name = content[line+2-(1-cumu_info)][71+len(semester)-1:-5]
+                cumu_info += 1
+                # course_name = course_name[:course_name.find("<")]
+            
+            # if course_name == 'The Science of Happiness':
+            #     pdb.set_trace()
             # get the credits
-            course_credits = content[line+3][75+len(semester)-1:]
-            course_credits = course_credits[:course_credits.find("<")]
+            if 'Credits' in content[line+4-(2-cumu_info)]:
+                course_credits = content[line+4-(2-cumu_info)][75+len(semester)-1:-5]
+                cumu_info += 1
+                # course_credits = course_credits[:course_credits.find("<")]
 
             # get the Grade
-            course_grade = content[line+5][77+len(semester)-1:]
-            course_grade = course_grade[:course_grade.find("<")]
+            if 'Final Grade' in content[line+6-(3-cumu_info)]:
+                course_grade = content[line+6-(3-cumu_info)][77+len(semester)-1:-5]
+                cumu_info += 1
+                # course_grade = course_grade[:course_grade.find("<")]
 
             semester_lst.append([course_num, course_name, course_credits, course_grade])
 
@@ -29,6 +42,10 @@ def parse_semester(semester, content):
 
 def parse_course_history(text):
     lst = text.split("\n")
+
+    # invalid input
+    if len(lst) < 5:
+        return None
 
     # find the name
     rough_location = text.find('class="IS_BB_LINKS_MENU_DESKTOP"')
