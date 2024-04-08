@@ -1,0 +1,941 @@
+<div id="IS_BB_MENU_ROW" class="row" style="">
+<div class="headerNav">
+<ul class="headerNavUL">
+<li class="IS_BB_LINKS_MENU_DESKTOP">
+<h5>Yuxuan Xia</h5>
+</li>
+
+<li class="IS_BB_LINKS_MENU_RSPV" onclick="toggleResponsiveHeaderLinks(this)">
+<h5>Yuxuan Xia</h5>
+
+<span class="IS_BB_LINKS_MENU_ICON_DOWN">&nbsp;</span></li>
+
+<li class="IS_BB_RSPV_HEADER_LINK">
+<h5><a href="https://sis.portal.nyu.edu/psp/ihprod/EMPLOYEE/EMPL/?cmd=logout" target="_parent">LOG OUT</a></h5>
+</li>
+</ul>
+</div>
+</div>
+
+<div onclick="toggleResponsiveHeader(this)" class="isRspToggleMenuIcon">&nbsp;</div>
+</div>
+</div>
+
+<div class="ptbr-divider"><!--divider--></div>
+
+<div id="NYU_ALBERT_LOGO" class="">
+<h1><a href="https://sis.portal.nyu.edu/psc/ihprod/EMPLOYEE/EMPL/s/WEBLIB_IS_MOBR.ISCRIPT1.FieldFormula.IScript_StartPage" target="_parent">Albert</a></h1>
+</div>
+
+<div class="ptbr-divider"><!--divider--></div>
+
+<div id="IS_BB_HEADER_MENU" class=""><!--?xml version = '1.0' encoding = 'UTF-8'?-->
+<nav aria-label="Site" role="navigation" class="megaMenu">
+<ul>
+<li selected="True" id="MENU_ID_IS_STUDENT_HOME_FLDR" class="megaMenuItem megaMenuSelected" onclick="javascript:isOpenLink('https://sis.portal.nyu.edu/psp/ihprod/EMPLOYEE/EMPL/h/?tab=IS_SSS_TAB&amp;pt_fname=IS_STUDENT_HOME_FLDR&amp;FolderPath=PORTAL_ROOT_OBJECT.IS_STUDENT_HOME_FLDR&amp;IsFolder=true', '_parent');"><a href="#" onclick="this.parent().click();">Student</a></li>
+
+<li selected="" id="MENU_ID_NYU_APPLICANTS_FLDR" class="megaMenuItem" onclick="javascript:isOpenLink('https://sis.portal.nyu.edu/psp/ihprod/EMPLOYEE/EMPL/h/?tab=NYU_APPLICANT_TAB&amp;pt_fname=NYU_APPLICANTS_FLDR&amp;FolderPath=PORTAL_ROOT_OBJECT.NYU_APPLICANTS_FLDR&amp;IsFolder=true', '_parent');"><a href="#" onclick="this.parent().click();">Applicant</a></li>
+
+<li selected="" id="MENU_ID_NYU_HOUSING_FLDR1" class="megaMenuItem" onclick="javascript:isOpenLink('https://sis.portal.nyu.edu/psp/ihprod/EMPLOYEE/EMPL/h/?tab=IS_HOUSING_TAB&amp;pt_fname=NYU_HOUSING_FLDR1&amp;FolderPath=PORTAL_ROOT_OBJECT.NYU_HOUSING_FLDR1&amp;IsFolder=true', '_parent');"><a href="#" onclick="this.parent().click();">Housing</a></li>
+
+<li selected="" id="MENU_ID_NYU_OTHER_RESOURCES_FLDR" class="megaMenuItem" onclick="javascript:toggleMegaMenu('MENU_ID_NYU_OTHER_RESOURCES_FLDR', 'SUBMENU_ID_NYU_OTHER_RESOURCES_FLDR', 'megaMenuSelected');"><a href="#" onclick="this.parent().click();">Other Resources</a></li>
+</ul>
+</nav>
+
+<div class="megaSubMenu" id="SUBMENU_ID_IS_STUDENT_HOME_FLDR">
+<ul></ul></div>
+
+<div class="megaSubMenu" id="SUBMENU_ID_NYU_APPLICANTS_FLDR">
+<ul></ul></div>
+
+<div class="megaSubMenu" id="SUBMENU_ID_NYU_HOUSING_FLDR1">
+<ul></ul></div>
+
+<div class="megaSubMenu" id="SUBMENU_ID_NYU_OTHER_RESOURCES_FLDR">
+<ul>
+<li selected="" id="NYU_OTHER_RESOURCES_FLDR" class="megaMenuItem" onclick="javascript:isOpenLink('https://sis.portal.nyu.edu/psp/ihprod/EMPLOYEE/EMPL/s/WEBLIB_IS_AW.ISCRIPT1.FieldFormula.IScript_AssemblePage?AWGroupID=NYU_OTHER_RESOURCES&amp;AWPageID=NYU_OTHER_RESOURCES&amp;AWObjName=NYU_OTHER_RESOURCES_LPG&amp;pt_fname=NYU_OTHER_RESOURCES_FLDR&amp;FolderPath=PORTAL_ROOT_OBJECT.NYU_OTHER_RESOURCES_FLDR&amp;IsFolder=true', '_parent');"><a href="#" onclick="this.parent().click();">Other Resources</a></li>
+
+<li selected="" id="NYU_ACADEMIC_CALENDA_FLDR" class="megaMenuItem" onclick="javascript:isOpenLink('https://sis.portal.nyu.edu/psp/ihprod/EMPLOYEE/EMPL/e/?url=https%3a%2f%2fwww.nyu.edu%2fregistrar%2fcalendars%2funiversity-academic-calendar.html', '_blank');"><a href="#" onclick="this.parent().click();">Academic Calendar</a></li>
+
+<li selected="" id="NYU_APPLICATION_CENT_FLDR" class="megaMenuItem" onclick="javascript:isOpenLink('https://sis.portal.nyu.edu/psp/ihprod/EMPLOYEE/EMPL/e/?url=https%3a%2f%2fsis.nyu.edu%2fpsc%2fcsprod%2fEMPLOYEE%2fWSQ_CAMPUS%2fc%2fNYU_AWS_SS.NYU_AAWS_INTERNAL.GBL%3fpage%3dNYU_AAWS_INTERNAL', '_blank');"><a href="#" onclick="this.parent().click();">Application Center</a></li>
+
+<li selected="" id="NYU_EVALUATION_PUBLI_FLDR" class="megaMenuItem" onclick="javascript:isOpenLink('https://sis.portal.nyu.edu/psp/ihprod/EMPLOYEE/EMPL/e/?url=https%3a%2f%2fsis.nyu.edu%2fpsc%2fcsprod%2fEMPLOYEE%2fSA%2fc%2fNYU_SR.NYU_CEV_PUB_RESULT.GBL%3fFolderPath%3dPORTAL_ROOT_OBJECT.NYU_MODIFICATIONS.NYU_CRSE_EVAL.NYU_CEV_PUB_RESULT_GBL', '_blank');"><a href="#" onclick="this.parent().click();">Course Feedback Results</a></li>
+
+<li selected="" id="NYU_FERPA_FLDR" class="megaMenuItem" onclick="javascript:isOpenLink('https://sis.portal.nyu.edu/psp/ihprod/EMPLOYEE/EMPL/e/?url=http%3a%2f%2fwww.nyu.edu%2fabout%2fpolicies-guidelines-compliance%2fpolicies-and-guidelines%2fFERPA.html', '_blank');"><a href="#" onclick="this.parent().click();">FERPA</a></li>
+
+<li selected="" id="NYU_FINANCIAL_AID_FLDR1" class="megaMenuItem" onclick="javascript:isOpenLink('https://sis.portal.nyu.edu/psp/ihprod/EMPLOYEE/EMPL/e/?url=http%3a%2f%2fwww.nyu.edu%2fadmissions%2ffinancial-aid-and-scholarships%2ffinancial-aid-at-nyu.html', '_blank');"><a href="#" onclick="this.parent().click();">Financial Aid</a></li>
+
+<li selected="" id="NYU_HOUSING_FLDR" class="megaMenuItem" onclick="javascript:isOpenLink('https://sis.portal.nyu.edu/psp/ihprod/EMPLOYEE/EMPL/e/?url=http%3a%2f%2fwww.nyu.edu%2fstudents%2fstudent-information-and-resources%2fhousing-and-dining.html', '_blank');"><a href="#" onclick="this.parent().click();">Housing</a></li>
+
+<li selected="" id="NYU_LAW_HOUSING_FLDR" class="megaMenuItem" onclick="javascript:isOpenLink('https://sis.portal.nyu.edu/psp/ihprod/EMPLOYEE/EMPL/e/?url=http%3a%2f%2fwww.law.nyu.edu%2fhousing%2f', '_blank');"><a href="#" onclick="this.parent().click();">Law Housing</a></li>
+
+<li selected="" id="NYU_CARD_CENTER_FLDR" class="megaMenuItem" onclick="javascript:isOpenLink('https://sis.portal.nyu.edu/psp/ihprod/EMPLOYEE/EMPL/e/?url=http%3a%2f%2fwww.nyu.edu%2flife%2fcampus-resources%2fnyu-card-and-campus-cash.html', '_blank');"><a href="#" onclick="this.parent().click();">NYU Card Center</a></li>
+
+<li selected="" id="NYU_CLASSES_FLDR" class="megaMenuItem" onclick="javascript:isOpenLink('https://sis.portal.nyu.edu/psp/ihprod/EMPLOYEE/EMPL/e/?url=http%3a%2f%2fbrightspace.nyu.edu%2f', '_blank');"><a href="#" onclick="this.parent().click();">NYU Brightspace</a></li>
+
+<li selected="" id="NYU_CONNECT_FLDR" class="megaMenuItem" onclick="javascript:isOpenLink('https://sis.portal.nyu.edu/psp/ihprod/EMPLOYEE/EMPL/e/?url=https%3a%2f%2fnyu.starfishsolutions.com%2fstarfish-ops', '_blank');"><a href="#" onclick="this.parent().click();">NYU Connect</a></li>
+
+<li selected="" id="NYU_SUMMER_FLDR" class="megaMenuItem" onclick="javascript:isOpenLink('https://sis.portal.nyu.edu/psp/ihprod/EMPLOYEE/EMPL/e/?url=http%3a%2f%2fwww.nyu.edu%2fadmissions%2fsummer-sessions.html', '_blank');"><a href="#" onclick="this.parent().click();">NYU Summer</a></li>
+
+<li selected="" id="NYU_HOUSING_PAYMENTS_FLDR" class="megaMenuItem" onclick="javascript:isOpenLink('https://sis.portal.nyu.edu/psp/ihprod/EMPLOYEE/SA/s/WEBLIB_NYU_TN.NYU_BP_AUTH.FieldFormula.IScript_NYU_BP_PopUp?%23&amp;pt_fname=NYU_HOUSING_PAYMENTS_FLDR&amp;FolderPath=PORTAL_ROOT_OBJECT.NYU_OTHER_RESOURCES_FLDR.NYU_HOUSING_PAYMENTS_FLDR&amp;IsFolder=true', '_parent');"><a href="#" onclick="this.parent().click();">NYU Housing Payments</a></li>
+
+<li selected="" id="NYU_OGS_FLDR" class="megaMenuItem" onclick="javascript:isOpenLink('https://sis.portal.nyu.edu/psp/ihprod/EMPLOYEE/EMPL/e/?url=http%3a%2f%2fwww.nyu.edu%2fstudents%2fstudent-information-and-resources%2fstudent-visa-and-immigration.html', '_blank');"><a href="#" onclick="this.parent().click();">OGS</a></li>
+
+<li selected="" id="NYU_OFFICE_OF_GLOBAL_FLDR" class="megaMenuItem" onclick="javascript:isOpenLink('https://sis.portal.nyu.edu/psp/ihprod/EMPLOYEE/EMPL/e/?url=http%3a%2f%2fwww.nyu.edu%2facademics%2fstudying-abroad.html', '_blank');"><a href="#" onclick="this.parent().click();">Office of Global Programs</a></li>
+
+<li selected="" id="NYU_PUBLIC_SAFETY_FLDR" class="megaMenuItem" onclick="javascript:isOpenLink('https://sis.portal.nyu.edu/psp/ihprod/EMPLOYEE/EMPL/e/?url=https%3a%2f%2fwww.nyu.edu%2flife%2fsafety-health-wellness%2fcampus-safety.html', '_blank');"><a href="#" onclick="this.parent().click();">Campus Safety</a></li>
+
+<li selected="" id="NYU_REPLACEMENT_DIPL_FLDR" class="megaMenuItem" onclick="javascript:isOpenLink('https://sis.portal.nyu.edu/psp/ihprod/EMPLOYEE/EMPL/e/?url=https%3a%2f%2fportal.paradigm-corp.com%2fcredential%2freorder%2fplaceorder%2f74594b5a4b74387a59452d735633343364485a514367', '_blank');"><a href="#" onclick="this.parent().click();">Replacement Diploma</a></li>
+
+<li selected="" id="NYU_UNIVERSITY_REGIS_FLDR" class="megaMenuItem" onclick="javascript:isOpenLink('https://sis.portal.nyu.edu/psp/ihprod/EMPLOYEE/EMPL/e/?url=https%3a%2f%2fwww.nyu.edu%2fstudents%2fstudent-information-and-resources%2fregistration-records-and-graduation.html', '_blank');"><a href="#" onclick="this.parent().click();">University Registrar</a></li>
+
+<li selected="" id="NYU_WASSERMAN_FLDR" class="megaMenuItem" onclick="javascript:isOpenLink('https://sis.portal.nyu.edu/psp/ihprod/EMPLOYEE/EMPL/e/?url=https%3a%2f%2fsis.nyu.edu%2fpsp%2fcsprod%2fEMPLOYEE%2fHRMS%2fc%2fNYU_SS.NYU_STDNT_EMP_APPL.GBL', '_blank');"><a href="#" onclick="this.parent().click();">Wasserman</a></li>
+
+<li selected="" id="NYU_WELLNESS_CENTER_FLDR" class="megaMenuItem" onclick="javascript:isOpenLink('https://sis.portal.nyu.edu/psp/ihprod/EMPLOYEE/EMPL/e/?url=https%3a%2f%2fwww.nyu.edu%2flife%2fsafety-health-wellness.html', '_blank');"><a href="#" onclick="this.parent().click();">Wellness Center</a></li>
+</ul>
+</div>
+
+<div class="megaMenuFavorites" id="MENU_ID_PARENT_FAVORITES" style="top: 0px;">
+<ul>
+<li class="megaMenuItem" id="MENU_ID_FAVORITES" onclick="javascript:toggleMegaMenu('MENU_ID_FAVORITES', 'SUBMENU_ID_FAVORITES', 'megaMenuSelected', 'open');"><a href="#" onclick="this.parent().click();">Favorites</a></li>
+</ul>
+</div>
+
+<div class="megaSubMenu" id="SUBMENU_ID_FAVORITES">
+<div id="is_fv_main"><div id="is_fv_main">
+<span>No favorites found</span>
+<ul class="is_fav_controls">
+<li>
+<a href="javascript:IS_FV.openAddMyFav();">Add Current Page</a>
+</li>
+<li>
+<a href="javascript:IS_FV.openAddMyFav(true);">Add External Link</a>
+</li>
+<li>
+<a href="javascript:IS_FV.openManageFav();">Manage My Favorites</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<script type="text/javascript">
+
+var elements = document.getElementsByClassName("megaMenu");if (elements[0] != null) {
+ var ulList = elements[0].firstElementChild; if (ulList != null) {
+ ulList.getBoundingClientRect(); $('MENU_ID_PARENT_FAVORITES').style.left=ulList.right+"px"; $('MENU_ID_PARENT_FAVORITES').style.top=0; }
+}
+
+IS_FV.refreshMyFav();
+</script>
+</div>
+</div>
+
+<div id="ptdropdownmenu" class="ptdropdownmenu">
+<div id="pthdr2navloc">&nbsp;</div>
+</div>
+
+<script language="javascript" type="text/javascript">
+ptHNavSideOffset = 150;
+</script>
+
+<script type="text/javascript" src="https://sis.portal.nyu.edu/cs/ihprod/cache/860/PT_JQUERY_2_X_JS_empty_MIN_1.js">
+</script>
+
+<script type="text/javascript" src="">
+</script>
+
+<script type="text/javascript" src="https://sis.portal.nyu.edu/cs/ihprod/cache/860/PT_PRCS_USER_NOTIFY_JS_MIN_1.js">
+</script>
+</div>
+
+<div id="ptifrmpopup" style="display:none;">
+<div id="ptpopup" role="alertdialog" aria-labelledby="ptpopoptitle" aria-describedby="ptpopupmsgtext">
+<div id="ptpopupcontainer">
+<div id="ptpopuptitlebar" class="ptpopuptitlebar">
+<p id="ptpopoptitle" class="PTPOPUP_TITLE">&nbsp;</p>
+
+<div id="ptpopupclose" title="Close">&nbsp;</div>
+</div>
+
+<div id="ptpopupcontentcontainer">
+<table id="ptpopuplayouttbl" role="presentation">
+<tbody>
+<tr>
+<td>
+<div id="ptpopupcontent">
+<div id="ptiframatfcontent">
+<div class="ptifrmatftitle"><span class="PAPAGETITLE">Add to Favorites</span></div>
+
+<div class="ptifrmatfinstruct"><span class="PAPAGEINSTRUCTIONS">Please Enter a Unique Description for this Favorite</span></div>
+
+<div id="ptifrmatfinput"><label id="ptifrmatflbl" class="PSEDITBOXLABEL" for="ptifrmatfdescr">*Description</label> <input id="ptifrmatfdescr" name="ptifrmatfdescr" class="PSEDITBOX" tabindex="0" type="text" value="Student Home" size="30" maxlength="30" uninav="false" uninavtargetfav="" lnode="" rnode="" uninavcrefname="IS_SSS_TAB" uninavcreflbl="Student Home"> 
+
+<div class="ptifrmatfbtns">
+<div><a class="PSPUSHBUTTON Left" style="border:0;"><span><input id="ptifrmatfok" class="PSPUSHBUTTONTBOK" type="button" tabindex="0" value="OK" title="OK"></span></a></div>
+
+<div><a class="PSPUSHBUTTON Left" style="border:0;"><span><input id="ptifrmatfcancel" class="PSPUSHBUTTONTBOK" type="button" tabindex="0" value="Cancel" title="Cancel"></span></a></div>
+</div>
+
+<input type="hidden" id="ptifrmatfname" value="IS_SSS_TAB"> <input type="hidden" name="ptatfsid" id="ptatfsid" value="Cbd5FdEZYMST5R8nOB4eostkqw4%3d"> <textarea type="hidden" id="ptifrmatflist" rows="80" cols="20"></textarea></div>
+</div>
+</div>
+
+<div id="ptpopupmsg">
+<div id="ptpopupmsgtext" class="popupText">&nbsp;</div>
+
+<div id="ptpopupmsgbuttons">
+<div><a class="PSPUSHBUTTON Left" onclick="javascript:if(event.target.id == this.firstChild.firstChild.id) { return true; } else return((this.firstChild &amp;&amp; this.firstChild.firstChild) != null ? this.firstChild.firstChild.click() : false);"><span><input id="ptpopupmsgbtn1" class="PSPUSHBUTTONTBOK" type="button" value="OK" tabindex="0" title="OK"></span></a> <a class="PSPUSHBUTTON Left" onclick="javascript:if(event.target.id == this.firstChild.firstChild.id) { return true; } else return((this.firstChild &amp;&amp; this.firstChild.firstChild) != null ? this.firstChild.firstChild.click() : false);"><span><input id="ptpopupmsgbtn2" class="PSPUSHBUTTONTBOK" type="button" value="Cancel" tabindex="0" title="Cancel"></span></a></div>
+</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="ptpopupshadow">&nbsp;</div>
+</div>
+</div>
+</header>
+
+<script type="text/javascript">
+ PTRTE_CheckImages('','','CompanyInfo'); 
+</script>
+</div>
+
+ <!--
+<Pagelet name="TopNav" Load="A">
+ <source node="LOCAL_NODE" href="s/WEBLIB_PT_NAV.ISCRIPT1.FieldFormula.IScript_PT_NAV_PAGELET?navtype=dropdown&ptlayout=N" /> 
+</Pagelet>
+--> 
+
+<div class="wrapper" id="wrapper">
+<div id="ptcol1" class="isEdRow1Wrp row"><!-- Begin Pagelet=NYU_SSS_STUDENT_HOME_PGLT --><!-- PageletState=MAX -->
+<ul>
+<li id="ptpgltli_NYU_SSS_STUDENT_HOME_PGLT" class="isEdPglt pthpli ptpgltfixed">
+<div id="div_loading_NYU_SSS_STUDENT_HOME_PGLT" class="ptoverlay ptoverlayhide">&nbsp;</div>
+
+<div id="ptpgltbody_NYU_SSS_STUDENT_HOME_PGLT"><div class="ptprtlcontainer" id="NYU_SSS_STUDENT_HOME_PGLT_Data">
+
+
+
+<script id="ptPgltReloadThis_NYU_SSS_STUDENT_HOME_PGLT" type="text/javascript">
+var doRefresh = false;if (document.cookie == '')doRefresh = true;else{var psTokIdx = document.cookie.indexOf('PS_TOKEN=');if ((psTokIdx < 0) || document.cookie.charAt(psTokIdx+10) == ';') doRefresh = true;}if (doRefresh) document.location.reload(true);
+</script>
+
+<div class="isSSS_Wrp">
+<div role="navigation" class="isSSS_Menu" aria-label="Resources" id="NYU_ED_SSS_BASE" data-pathtodefault="IS_ED_SSS_SUMMARY:SSS_SUMMARY_ALL"><a onclick="IS.SSS.MenuClick(this);NYU.SSS.Bursar.Clear();" href="javascript:void(0);" id="IS_ED_SSS_SUMMARYLnk" data-querystring="group=IS_ED_SSS_SUMMARY&amp;section=SSS_SUMMARY_ALL" class="">Home<span>&nbsp;</span></a><a onclick="IS.SSS.MenuClick(this);NYU.SSS.Bursar.Clear();" href="javascript:void(0);" id="NYU_ED_SSS_ACADEMICSLnk" data-querystring="group=NYU_ED_SSS_ACADEMICS&amp;section=SSS_ADVISING_ALL">Academics<span>&nbsp;</span></a><a onclick="IS.SSS.MenuClick(this);NYU.SSS.Bursar.Clear();" href="javascript:void(0);" id="IS_ED_SSS_GRADESLnk" data-querystring="group=IS_ED_SSS_GRADES&amp;section=SSS_GRADES_ALL" class=" selected">Grades &amp; Transcripts<span>&nbsp;</span></a><a onclick="IS.SSS.MenuClick(this);NYU.SSS.Bursar.Clear();" href="javascript:void(0);" id="IS_ED_SSS_FINANCIALAIDLnk" data-querystring="group=IS_ED_SSS_FINANCIALAID&amp;section=FINANCIALAID">Finances<span>&nbsp;</span></a><a onclick="IS.SSS.MenuClick(this);NYU.SSS.Bursar.Clear();" href="javascript:void(0);" id="NYU_ED_SSS_PERS_INFOLnk" data-querystring="group=NYU_ED_SSS_PERS_INFO&amp;section=SSS_PERSONAL_ALL">Personal Info<span>&nbsp;</span></a></div>
+
+<span id="jumptomaincontent">&nbsp;</span> 
+
+<div role="main" class="isSSS_Main" id="IS_ED_SSS_SUMMARYWrp">
+<!--
+Copyright (c) 2000, 2022, Oracle and/or its affiliates. -->
+
+<script type="text/javascript">
+var bPSHTMLtemplate = true; var nLastAccessTime = (new Date()).getTime();
+</script>
+
+<style type="text/css">
+ @media only screen and (min-width: 992px) {
+ tr[hideDesktop="true"] td[headers="tbl_Course"]
+ { color: transparent; }
+
+ tr[hideDesktop="true"] td[headers="tbl_Eval"] a,
+ tr[hideDesktop="true"] td[headers="tbl_URL"] a,
+ tr[hideDesktop="true"] td[headers="tbl_Deadlines"] a
+ { display: none; }
+ }
+ 
+</style>
+
+<title>Section Default (CS)</title>
+
+
+<span><span id="IS_AC_RESPONSE"><!--Begin target: TargetContent URL: https%3A%2F%2Fsis.nyu.edu%2Fpsc%2Fcsprod%2FEMPLOYEE%2FSA%2Fs%2FWEBLIB_IS_DS.ISCRIPT1.FieldFormula.IScript_DrawSection%3Fgroup%3DIS_ED_SSS_SUMMARY%26section%3DSSS_SUMMARY_ALL-->
+<div class="ptprtlcontainer">
+<div class="isDS_Section" groupid="IS_ED_SSS_SUMMARY" sectionid="SSS_SUMMARY_ALL">
+<div title="NYU Pop-up Blocker Message" id="NYUBlockerMessage" class="NYUblocker-message" aria-visible="false" style="display: none;"><button tabindex="0" onclick="NYUcloseBlockerMessage()" class="NYUblocker-closebtn">x</button> 
+
+<p class="NYUmessagetext">You should have been directed to a new tab/window. If not, please check your browser pop-up blocker settings and enable pop-ups for this site. For detailed instructions on how to enable pop-ups, please copy and paste the URL below to a new tab/browser:<br>
+<br>
+<textarea tabindex="0" readonly="true" onfocus="this.select();" id="NYUBlockerLink" class="NYUmessagetextlink"> https://www.nyu.edu/students/student-information-and-resources/registration-records-and-graduation/albert-help.html</textarea></p>
+</div>
+
+<div id="NYUBlueMessage_medsmall">
+<p title="Course Feedback Message">There is a 24hour delay in Albert status updates related to Blue Course Feedback submission.</p>
+
+<a title="Close Message" onclick="NYUcloseBlueMessage_medsmall();" id="NYUBlueMsgClose_medsmall" href="javascript:void(0);">Close</a></div>
+
+<div id="IS_SSS_SUMMARY_NEWS" class="isSSS_FullW"><div id="IS_NEWS_CONTAINER" class="is_news_container" xmlns:fo="http://www.w3.org/1999/XSL/Format"><script type="text/javascript">
+ 
+ var newsspeed300035=5000; var fade300035=new Boolean(true); var fadestep300035=0.09; iNewsfunc = function(){
+ iNewsLoadNewsHeader(300035,newsspeed300035, iNewsChangeDots); }; iAddOnLoadEvent(iNewsfunc); </script>
+ <div id="NEWS300035" class="is_news" style="height: 274px;">
+ <div id="EXP300035-300147" class="hide" style="background: url(&quot;https://sis.portal.nyu.edu/cs/ihprod/cache/860/EPPCM_IMAGEUPLD_GMYDAMJTHE==_GE==_731087871.JPG&quot;) center center / cover no-repeat; opacity: 0; display: none;" onclick="javascript:iNewsOpenNews('300035','300147','ihprod','N')">
+ <div class="is_newsHeadlineBG"><span class="hide" id="CID300035-300147">300036</span>
+ <p id="TOPSTORYHDR300035-300147" class="IS_NEWS_TOPSTORY_SECTION_TITLE hide">Top Story</p>
+ <div id="STITLE300035-300147" class="hide">Graduating This Summer?</div>
+ <div class="is_newsContent">
+ <h2>Graduating This Summer?</h2><br>
+ <p>Completing your final graduation requirements this summer? Before you apply...
+ </p><br>
+ <h6 class="readMore"><a onclick="event.stopPropagation();" href="javascript:iNewsOpenNews('300035','300147','ihprod','N')">
+ READ MORE
+ </a>
+ </h6>
+ </div>
+ </div>
+ </div>
+ <div id="EXP300035-300078" class="hide" style="background: url(&quot;https://sis.portal.nyu.edu/cs/ihprod/cache/860/EPPCM_IMAGEUPLD_GMYDAMJTHA==_GE==_731012678.JPG&quot;) center center / cover no-repeat; opacity: 0; display: none;" onclick="javascript:iNewsOpenNews('300035','300078','ihprod','N')">
+ <div class="is_newsHeadlineBG"><span class="hide" id="CID300035-300078">300036</span>
+ <p id="TOPSTORYHDR300035-300078" class="IS_NEWS_TOPSTORY_SECTION_TITLE hide">Top Story</p>
+ <div id="STITLE300035-300078" class="hide">The Game of Life...after NYU</div>
+ <div class="is_newsContent">
+ <h2>The Game of Life...after NYU</h2><br>
+ <p>Put your financial skills to work &amp; test your knowledge with The Game of Life...
+ </p><br>
+ <h6 class="readMore"><a onclick="event.stopPropagation();" href="javascript:iNewsOpenNews('300035','300078','ihprod','N')">
+ READ MORE
+ </a>
+ </h6>
+ </div>
+ </div>
+ </div>
+ <div id="EXP300035-300054" class="show" style="background: url(&quot;https://sis.portal.nyu.edu/cs/ihprod/cache/860/EPPCM_IMAGEUPLD_GMYDAMBZGQ==_GE==_648125679.JPG&quot;) center center / cover no-repeat; opacity: 1;" onclick="javascript:iNewsOpenNews('300035','300054','ihprod','N')">
+ <div class="is_newsHeadlineBG"><span class="hide" id="CID300035-300054">300036</span>
+ <p id="TOPSTORYHDR300035-300054" class="IS_NEWS_TOPSTORY_SECTION_TITLE hide">Top Story</p>
+ <div id="STITLE300035-300054" class="hide">Albert Resources</div>
+ <div class="is_newsContent">
+ <h2>Albert Resources</h2><br>
+ <p>Albert resources for your academic journey.</p><br>
+ <h6 class="readMore"><a onclick="event.stopPropagation();" href="javascript:iNewsOpenNews('300035','300054','ihprod','N')">
+ READ MORE
+ </a>
+ </h6>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div class="prepend-top-10 hide">
+ <div class="content">
+ <div class="IS_NEWS_CONTROL_BAR" id="CNTL-DIV300035"><span id="Next300035" class="IS_NEWS_NEXT_STORY_LINE">Next: &nbsp;<a href="javascript:iNewsChangeStory(300035,5000,'forward')">Graduating This Summer?</a></span>
+ <div class="IS_NEWS_CONTROLS"><a class="IS_NEWS_PREV" href="javascript:iNewsChangeStory(300035,newsspeed300035,'back')"><img title="Previous Story" alt="Previous Story" src="/intrasee/images/pixel.gif" border="0">
+ </a><a id="pauseNews300035" class="IS_NEWS_PAUSE" href="javascript:iNewsCancelTimer(300035)"><img title="Pause" alt="Pause" src="/intrasee/images/pixel.gif" border="0">
+ </a><a id="playNews300035" class="IS_NEWS_PLAY" style="display: none" href="javascript:iNewsStartAutoPlay(300035,newsspeed300035)"><img title="Resume Playing" alt="Resume Playing" src="/intrasee/images/pixel.gif" border="0">
+ </a><a class="IS_NEWS_NEXT" href="javascript:iNewsChangeStory(300035,newsspeed300035,'forward')"><img title="Next Story" alt="Next Story" src="/intrasee/images/pixel.gif" border="0">
+ </a><span id="storyCount300035" class="IS_NEWS_NEXT_STORY_CNT">&nbsp;3/3&nbsp;</span>
+ </div>
+ </div>
+ </div>
+ </div>
+ <div class="newsDots">
+ <ul>
+ <li id="EXP300035-300147dot" class="newsDot" onclick="javascript:iNewsDotsClick(this,300035);">
+ &nbsp; </li>
+ <li id="EXP300035-300078dot" class="newsDot" onclick="javascript:iNewsDotsClick(this,300035);">
+ &nbsp; </li>
+ <li id="EXP300035-300054dot" class="newsDot dotSelected" onclick="javascript:iNewsDotsClick(this,300035);">
+ &nbsp; </li>
+ </ul>
+ </div>
+</div>
+</div>
+
+<div id="ToDoHoldsEnrlDates">
+<div class="NYU_same_height_width">
+<div class="nyuSSS_ThirdW">
+<h2>To Do (0)</h2>
+
+<div id="NoToDoText">You have no To-Dos.</div>
+</div>
+
+<div class="nyuSSS_ThirdW">
+<h2>Holds &nbsp;(1)</h2>
+
+<div class="isSSS_Holds"><a onclick="IS.SSS.DisplayHoldDetails(this);" href="javascript:void(0);" id="IS_SSS_HoldXAC1246Lnk" title="Holds"><span>&nbsp;</span>Advisor Approval Required<br>
+Summer 2024</a> 
+
+<div id="IS_SSS_HoldXAC1246Wrp">
+<div class="isSSS_HoldDetails">
+<h3>Advisor Clearance Required</h3>
+
+<div class="HoldLabel">Holds</div>
+
+<span>Summer 2024 &nbsp;</span> 
+
+<div class="HoldLabel">Reason</div>
+
+<span>Advisor Approval Required &nbsp;</span> 
+
+<div class="HoldLabel">Effective Date</div>
+
+<span>1/16/2024 &nbsp;</span> 
+
+<div class="HoldLabel">Contact</div>
+
+<span>N/A</span> 
+
+<div class="HoldLabel">Instructions</div>
+
+<span>You are not currently eligible to enroll in courses for this term. Approval of your schedule by your advisor is required. Contact your advisor to schedule a time for review of your schedule and assistance as needed. After your visit, recheck the Registration Status feature to determine your eligibility status for registration for this term. &nbsp; &nbsp;</span></div>
+</div>
+</div>
+</div>
+
+<div class="nyuSSS_ThirdW">
+<h2>Enrollment Dates</h2>
+
+<span class="nyuEnrlApt">No Appointment Assigned</span></div>
+</div>
+</div>
+
+<div class="clearfloat">&nbsp;</div>
+
+<div class="isSSS_CareerSelect hide"><span>Viewing:</span><a onclick="IS.SSS.CartCareerSelect(this);IS.ED.MakeTablesResponsivePostLoad(document.getElementsByClassName(this.getAttribute('data-careerclass'))[0])" href="javascript:void(0);" class="selected" data-careerclass="isSSS_ShCtCarUGRD" id="IS_SSS_ShCtCarUGRDLnk">Undergraduate</a></div>
+
+<div class="isSSS_FullW isSSS_ShopCart isSSS_CartByCareer isSSS_noBkBr isSSS_ShCtCarUGRD selected"><a onclick="IS.SSS.ShopCartTermSelect(this); makeTablesResponsivePostLoad(this.parentNode); DisplayToggleButton('1246UGRD');" href="javascript:void(0);" data-termclass="isSSS_ShCtTm1246UGRD" id="IS_SSS_ShCtTm1246UGRDLnk" title="Summer 2024&nbsp;(Undergraduate)" class="selected">Summer 2024</a><a onclick="IS.SSS.ShopCartTermSelect(this); makeTablesResponsivePostLoad(this.parentNode); DisplayToggleButton('1244UGRD');" href="javascript:void(0);" data-termclass="isSSS_ShCtTm1244UGRD" id="IS_SSS_ShCtTm1244UGRDLnk" title="Spring 2024&nbsp;(Undergraduate)">Spring 2024</a> 
+
+<div class="isSSS_ShCtLnkWrp">&nbsp; <a onclick="NYUShowLegend();" href="javascript:void(0);" class="isSSS_ShCtLnkL"><span>&nbsp;</span>Legend</a> 
+
+<div id="NYUlegend" class="isSSS_ShCtLegend"><a onclick="NYUHideLegend();" href="javascript:void(0);">X</a> 
+
+<ul>
+<li><span title="Validated" class="isSSS_ShCtMsgVL">&nbsp;</span>Validated</li>
+
+<li><span title="Validated with Errors" class="isSSS_ShCtMsgVLE">&nbsp;</span>Validated with Errors</li>
+
+<li><span title="Submission Error" class="isSSS_ShCtMsgSE">&nbsp;</span>Submission Error</li>
+
+<li><span title="Approved" class="isSSS_ShCtMsgAP">&nbsp;</span>Approved</li>
+
+<li><span title="Pending" class="isSSS_ShCtMsgPE">&nbsp;</span>Pending</li>
+
+<li><span title="Request Permission" class="isSSS_ShCtMsgRP">&nbsp;</span>Request Permission</li>
+
+<li><span title="Denied" class="isSSS_ShCtMsgDD">&nbsp;</span>Denied</li>
+
+<li><span title="None Required" class="isSSS_ShCtMsgND">&nbsp;</span>None Required</li>
+</ul>
+
+<span>&nbsp;</span></div>
+
+<a href="javascript:void(0);" class="isSSS_ShCtLnkDCinfo isSSS_ShCtLnkDC isSSS_ShCtTm1246UGRD selected" title="How To Download Schedule" onclick="window.open('https://www.nyu.edu/students/student-information-and-resources/registration-records-and-graduation/albert-help/training/students/download-calendar.html')"><span style="pointer-events:none;">&nbsp;</span></a><a href="javascript:void(0);" class="isSSS_ShCtLnkDC isSSS_ShCtTm1246UGRD selected" onclick="IS.AjaxRequest('get', IS_SSS_ICAL_DOWNLOAD + '?TERM=1246&amp;INSTITUTION=NYUNV&amp;ACAD_CAREER=UGRD', function (o) {document.getElementById('downloadCalendar1246').innerHTML = o.responseText;})">Download Schedule</a>
+<div id="downloadCalendar1246" class="hide">&nbsp;</div>
+
+<a target="_blank" href="https://www.bkstr.com/webApp/discoverShop?merfnbr=2015&amp;termDir=1246" class="isSSS_ShCtLnkDC isSSS_ShCtTm1246UGRD selected">Bookstore</a><a href="javascript:void(0);" class="isSSS_ShCtLnkDCinfo isSSS_ShCtLnkDC isSSS_ShCtTm1244UGRD" title="How To Download Schedule" onclick="window.open('https://www.nyu.edu/students/student-information-and-resources/registration-records-and-graduation/albert-help/training/students/download-calendar.html')"><span style="pointer-events:none;">&nbsp;</span></a><a href="javascript:void(0);" class="isSSS_ShCtLnkDC isSSS_ShCtTm1244UGRD" onclick="IS.AjaxRequest('get', IS_SSS_ICAL_DOWNLOAD + '?TERM=1244&amp;INSTITUTION=NYUNV&amp;ACAD_CAREER=UGRD', function (o) {document.getElementById('downloadCalendar1244').innerHTML = o.responseText;})">Download Schedule</a>
+<div id="downloadCalendar1244" class="hide">&nbsp;</div>
+
+<a target="_blank" href="https://www.bkstr.com/webApp/discoverShop?merfnbr=2015&amp;termDir=1244&amp;courseRefId1=6023&amp;courseRefId2=6025&amp;courseRefId3=6036&amp;courseRefId4=23313" class="isSSS_ShCtLnkDC isSSS_ShCtTm1244UGRD">Bookstore</a> <a title="Weekly Schedule" href="javascript:void(0);" aria-label="Weekly Schedule" onclick="window.open('https://sis.nyu.edu/psc/csprod/EMPLOYEE/SA/c/NYU_SR_FL.NYU_SSENRL_SCHD_W.GBL?Action=U')">Weekly Schedule</a> <a title="Instruction Mode Definitions" href="javascript:void(0);" aria-label="Instruction Mode Definitions" onclick="window.open('https://www.nyu.edu/students/student-information-and-resources/registration-records-and-graduation/registration/classroom-locations.html');">Instruction Mode Definitions</a><a title="Course Feedback" href="javascript:void(0);" aria-label="Course Feedback" onclick="window.open('https://coursefeedback.nyu.edu/nyu');">Course Feedback</a></div>
+
+<div class="collapse_display"><button onclick="ToggleHideDisplay()" href="#" aria-expanded="true" id="1246UGRDCart" aria-controls="1246UGRDCart_toggle1 1246UGRDCart_toggle2" class="selected">Shopping Cart and Waitlist Courses <span style="pointer-events:none;" onclick="ToggleHideDisplaySpan()" href="#" id="1246UGRDCart_span">&nbsp;</span></button></div>
+
+<div id="1246UGRDCart_toggle1" class="isSSS_ShCtTermWrp selected isSSS_ShCtTm1246UGRD">
+<h2>Shopping Cart (Potential / Pending Courses) - Summer 2024</h2>
+
+<div class="isSSS_ShCtEmpWrp">
+<p>Your Shopping Cart is empty. Visit the&nbsp;<a href="javascript:void(0);" data-cref="NYU_ENRL_CART" onclick="nyuShowFluidComponentLB('NYU_ENRL_CART_FL','IS.SSS.RefreshMenuItem(\'IS_ED_SSS_SUMMARY\',function(){IS.SSS.CartCareerSelect($(\'IS_SSS_ShCtCarUGRDLnk\'));IS.ED.MakeTablesResponsivePostLoad(document.getElementsByClassName($(\'IS_SSS_ShCtCarUGRDLnk\').getAttribute(\'data-careerclass\'))[0]);IS.SSS.ShopCartTermSelect($(\'IS_SSS_ShCtTm1246UGRDLnk\'));makeTablesResponsivePostLoad($(\'IS_SSS_ShCtTm1246UGRDLnk\').parentNode);})','?STRM=1246&amp;ACAD_CAREER=UGRD&amp;EMPLID=14735289&amp;INSTITUTION=NYUNV')">Course Search</a>&nbsp;to add classes.</p>
+</div>
+
+<span style="display:none;">&nbsp;</span></div>
+
+<div class="collapse_display"><button onclick="ToggleHideDisplay()" href="#" aria-expanded="true" id="1244UGRDCart" aria-controls="1244UGRDCart_toggle1 1244UGRDCart_toggle2">Shopping Cart and Waitlist Courses <span style="pointer-events:none;" onclick="ToggleHideDisplaySpan()" href="#" id="1244UGRDCart_span">&nbsp;</span></button></div>
+
+<div id="1244UGRDCart_toggle1" class="isSSS_ShCtTermWrp isSSS_ShCtTm1244UGRD">
+<h2>Shopping Cart (Potential / Pending Courses) - Spring 2024</h2>
+
+<table class="isSSS_ShCtTable accordion-table" summary="Shopping Cart (Potential / Pending Courses)" title="Shopping Cart (Potential / Pending Courses)">
+<tbody><tr class=" hidden-accordion-row">
+<th id="tblCart_Course_1_1244" class=" hidden-accordion-row">Course&nbsp;(Units)</th>
+<th id="tblCart_Instructor_1_1244" class=" hidden-accordion-row">Instructor</th>
+<th id="tblCart_Location_1_1244" class=" hidden-accordion-row">Instruction Mode and Location</th>
+<th id="tblCart_Time_1_1244" class=" hidden-accordion-row">Time</th>
+<th id="tblCart_Day_1_1244" class=" hidden-accordion-row">Day</th>
+<th id="tbl_StartDate_1_1244" class=" hidden-accordion-row">Dates</th>
+<th id="tblCart_Msg_1_1244" class=" hidden-accordion-row">Messages</th>
+<th id="tblCart_Permission_1_1244" class=" hidden-accordion-row">Permission</th>
+</tr>
+
+<tr class="isSSS_ShCtPrim accordion-row accordion-row-open" style="height: 0px;">
+<td headers="tblCart_Course_1_1244" title="Computer Networking" class=" accordion-head" data-label="Course(Units)">Computer Networking<br>
+CSCI-SHU&nbsp;308<br>
+&nbsp;001&nbsp;(4)</td>
+<td headers="tblCart_Instructor_1_1244" class=" accordion-data" data-label="Instructor"><span data-key="6027">Spathis</span></td>
+<td headers="tblCart_Location_1_1244" class=" accordion-data" data-label="Instruction Mode and Location"><span>In-Person:</span><span>567 West Yangsi Rd, Shanghai Room N207</span><span>Loc:Shanghai</span></td>
+<td headers="tblCart_Time_1_1244" class=" accordion-data" data-label="Time"><span>2:15 PM -<br>
+3:30 PM</span></td>
+<td headers="tblCart_Day_1_1244" class=" accordion-data" data-label="Day"><span>MoWe</span></td>
+<td headers="tbl_StartDate_1_1244" class=" accordion-data" data-label="Dates"><span>1/22/2024 -<br>
+5/10/2024</span></td>
+<td class="isSSS_ShCtMsg accordion-data" headers="tblCart_Msg_1_1244" data-label="Messages"></td>
+<td class="isSSS_ShCtPerm accordion-data" headers="tblCart_Permission_1_1244" data-label="Permission"></td>
+</tr>
+
+<tr class="isSSS_ShCtNonPrim accordion-row accordion-row-closed" style="height: 0px;">
+<td headers="tblCart_Course_1_1244" title="Computer Networking" class=" accordion-head" data-label="Course(Units)"><span class="isSSS_ShCtEnIcon">&nbsp;</span>Lecture</td>
+<td headers="tblCart_Instructor" class=" accordion-data" data-label="Instructor"><span data-key="6027">Spathis</span></td>
+<td headers="tblCart_Location" class=" accordion-data" data-label="Instruction Mode and Location"><span>In-Person:</span><span>567 West Yangsi Rd, Shanghai Room N207</span><span>Loc:Shanghai</span></td>
+<td headers="tblCart_Time" class=" accordion-data" data-label="Time"><span>2:15 PM -<br>
+3:30 PM</span></td>
+<td headers="tblCart_Day" class=" accordion-data" data-label="Day"><span>MoWe</span></td>
+<td headers="tbl_Msg" class="isSSS_ShCtMsg accordion-data" data-label="Dates">&nbsp;</td>
+<td headers="tbl_Permission" class=" accordion-data" data-label="Messages">&nbsp;</td>
+</tr>
+
+<tr class="isSSS_ShCtNonPrim accordion-row accordion-row-closed" style="height: 0px;">
+<td headers="tblCart_Course_1_1244" title="Computer Networking" class=" accordion-head" data-label="Course(Units)"><span class="isSSS_ShCtEnIcon">&nbsp;</span>Recitation</td>
+<td headers="tblCart_Instructor" class=" accordion-data" data-label="Instructor"><span data-key="6028">Spathis</span></td>
+<td headers="tblCart_Location" class=" accordion-data" data-label="Instruction Mode and Location"><span>In-Person:</span><span>567 West Yangsi Rd, Shanghai Room SB124</span><span>Loc:Shanghai</span></td>
+<td headers="tblCart_Time" class=" accordion-data" data-label="Time"><span>2:15 PM -<br>
+3:30 PM</span></td>
+<td headers="tblCart_Day" class=" accordion-data" data-label="Day"><span>Fr</span></td>
+<td headers="tbl_Msg" class="isSSS_ShCtMsg accordion-data" data-label="Dates">&nbsp;</td>
+<td headers="tbl_Permission" class=" accordion-data" data-label="Messages">&nbsp;</td>
+</tr>
+
+<tr class="isSSS_ShCtPrim accordion-row accordion-row-closed" style="height: 0px;">
+<td headers="tblCart_Course_1_1244" title="Circuits" class=" accordion-head" data-label="Course(Units)">Circuits<br>
+EENG-SHU&nbsp;251<br>
+&nbsp;001&nbsp;(4)</td>
+<td headers="tblCart_Instructor_1_1244" class=" accordion-data" data-label="Instructor"><span data-key="6047">Radhakrishnan</span></td>
+<td headers="tblCart_Location_1_1244" class=" accordion-data" data-label="Instruction Mode and Location"><span>In-Person:</span><span>567 West Yangsi Rd, Shanghai Room EB112</span><span>Loc:Shanghai</span></td>
+<td headers="tblCart_Time_1_1244" class=" accordion-data" data-label="Time"><span>09:45 AM -<br>
+11:00 AM</span></td>
+<td headers="tblCart_Day_1_1244" class=" accordion-data" data-label="Day"><span>MoWe</span></td>
+<td headers="tbl_StartDate_1_1244" class=" accordion-data" data-label="Dates"><span>1/22/2024 -<br>
+5/10/2024</span></td>
+<td class="isSSS_ShCtMsg accordion-data" headers="tblCart_Msg_1_1244" data-label="Messages"></td>
+<td class="isSSS_ShCtPerm accordion-data" headers="tblCart_Permission_1_1244" data-label="Permission"></td>
+</tr>
+
+<tr class="isSSS_ShCtNonPrim accordion-row accordion-row-closed" style="height: 0px;">
+<td headers="tblCart_Course_1_1244" title="Circuits" class=" accordion-head" data-label="Course(Units)"><span class="isSSS_ShCtEnIcon">&nbsp;</span>Lecture</td>
+<td headers="tblCart_Instructor" class=" accordion-data" data-label="Instructor"><span data-key="6047">Radhakrishnan</span></td>
+<td headers="tblCart_Location" class=" accordion-data" data-label="Instruction Mode and Location"><span>In-Person:</span><span>567 West Yangsi Rd, Shanghai Room EB112</span><span>Loc:Shanghai</span></td>
+<td headers="tblCart_Time" class=" accordion-data" data-label="Time"><span>09:45 AM -<br>
+11:00 AM</span></td>
+<td headers="tblCart_Day" class=" accordion-data" data-label="Day"><span>MoWe</span></td>
+<td headers="tbl_Msg" class="isSSS_ShCtMsg accordion-data" data-label="Dates">&nbsp;</td>
+<td headers="tbl_Permission" class=" accordion-data" data-label="Messages">&nbsp;</td>
+</tr>
+
+<tr class="isSSS_ShCtNonPrim accordion-row accordion-row-closed" style="height: 0px;">
+<td headers="tblCart_Course_1_1244" title="Circuits" class=" accordion-head" data-label="Course(Units)"><span class="isSSS_ShCtEnIcon">&nbsp;</span>Laboratory</td>
+<td headers="tblCart_Instructor" class=" accordion-data" data-label="Instructor"><span data-key="6048">Radhakrishnan</span></td>
+<td headers="tblCart_Location" class=" accordion-data" data-label="Instruction Mode and Location"><span>In-Person:</span><span>567 West Yangsi Rd, Shanghai Room S407</span><span>Loc:Shanghai</span></td>
+<td headers="tblCart_Time" class=" accordion-data" data-label="Time"><span>09:45 AM -<br>
+11:25 AM</span></td>
+<td headers="tblCart_Day" class=" accordion-data" data-label="Day"><span>Fr</span></td>
+<td headers="tbl_Msg" class="isSSS_ShCtMsg accordion-data" data-label="Dates">&nbsp;</td>
+<td headers="tbl_Permission" class=" accordion-data" data-label="Messages">&nbsp;</td>
+</tr>
+
+<tr class=" accordion-row accordion-row-closed" style="height: 0px;">
+<td headers="tblCart_Course_1_1244" title="Elementary French I" class=" accordion-head" data-label="Course(Units)">Elementary French I<br>
+FREN-SHU&nbsp;1<br>
+&nbsp;001&nbsp;(4)</td>
+<td headers="tblCart_Instructor_1_1244" class=" accordion-data" data-label="Instructor"><span data-key="5623">Kerbellec</span></td>
+<td headers="tblCart_Location_1_1244" class=" accordion-data" data-label="Instruction Mode and Location"><span>In-Person:</span><span>567 West Yangsi Rd, Shanghai Room EB220</span><span>Loc:Shanghai</span></td>
+<td headers="tblCart_Time_1_1244" class=" accordion-data" data-label="Time"><span>09:45 AM -<br>
+11:00 AM</span></td>
+<td headers="tblCart_Day_1_1244" class=" accordion-data" data-label="Day"><span>MoWeTh</span></td>
+<td headers="tbl_StartDate_1_1244" class=" accordion-data" data-label="Dates"><span>1/22/2024 -<br>
+5/10/2024</span></td>
+<td class="isSSS_ShCtMsg accordion-data" headers="tblCart_Msg_1_1244" data-label="Messages"></td>
+<td class="isSSS_ShCtPerm accordion-data" headers="tblCart_Permission_1_1244" data-label="Permission"></td>
+</tr>
+
+<tr class=" accordion-row accordion-row-closed" style="height: 0px;">
+<td headers="tblCart_Course_1_1244" title="Group Guqin, All Levels" class=" accordion-head" data-label="Course(Units)">Group Guqin, All Levels<br>
+MUS-SHU&nbsp;152<br>
+&nbsp;001&nbsp;(2)</td>
+<td headers="tblCart_Instructor_1_1244" class=" accordion-data" data-label="Instructor"><span data-key="6153">Dai</span></td>
+<td headers="tblCart_Location_1_1244" class=" accordion-data" data-label="Instruction Mode and Location"><span>In-Person:</span><span>567 West Yangsi Rd, Shanghai Room WB141</span><span>Loc:Shanghai</span></td>
+<td headers="tblCart_Time_1_1244" class=" accordion-data" data-label="Time"><span>6:00 PM -<br>
+8:10 PM</span></td>
+<td headers="tblCart_Day_1_1244" class=" accordion-data" data-label="Day"><span>We</span></td>
+<td headers="tbl_StartDate_1_1244" class=" accordion-data" data-label="Dates"><span>1/22/2024 -<br>
+5/10/2024</span></td>
+<td class="isSSS_ShCtMsg accordion-data" headers="tblCart_Msg_1_1244" data-label="Messages"></td>
+<td class="isSSS_ShCtPerm accordion-data" headers="tblCart_Permission_1_1244" data-label="Permission"></td>
+</tr>
+</tbody></table>
+
+<a href="javascript:void(0);" data-cref="NYU_ENRL_CART" class="nyuCourseSearch" onclick="nyuShowFluidComponentLB('NYU_COURSE_SEARCH','IS.SSS.RefreshMenuItem(\'IS_ED_SSS_SUMMARY\',function(){IS.SSS.CartCareerSelect($(\'IS_SSS_ShCtCarUGRDLnk\'));IS.ED.MakeTablesResponsivePostLoad(document.getElementsByClassName($(\'IS_SSS_ShCtCarUGRDLnk\').getAttribute(\'data-careerclass\'))[0]);IS.SSS.ShopCartTermSelect($(\'IS_SSS_ShCtTm1244UGRDLnk\'));makeTablesResponsivePostLoad($(\'IS_SSS_ShCtTm1244UGRDLnk\').parentNode);})','?Page=NYU_CLS_SRCH&amp;Action=U&amp;IPORTAL=Y&amp;ISTRM=1244&amp;ICAREER=UGRD&amp;INSTITUTION=NYUNV');"><span>&nbsp;</span>Course Search</a> <button type="button" data-cref="IS_ED_ADD_TO_CART" class="isSSS_ShCtVSEbtn" onclick="nyuShowFluidComponentLB('NYU_IS_ED_CS_ADD_TO_CART','IS.SSS.RefreshMenuItem(\'IS_ED_SSS_SUMMARY\',function(){IS.SSS.CartCareerSelect($(\'IS_SSS_ShCtCarUGRDLnk\'));IS.ED.MakeTablesResponsivePostLoad(document.getElementsByClassName($(\'IS_SSS_ShCtCarUGRDLnk\').getAttribute(\'data-careerclass\'))[0]);IS.SSS.ShopCartTermSelect($(\'IS_SSS_ShCtTm1244UGRDLnk\'));makeTablesResponsivePostLoad($(\'IS_SSS_ShCtTm1244UGRDLnk\').parentNode);})','?Page=NYU_SSENRL_CART_FL&amp;Action=A&amp;STRM=1244&amp;ICAREER=UGRD&amp;STRM=1244&amp;ACAD_CAREER=UGRD&amp;EMPLID=UGRD&amp;INSTITUTION=NYUNV');"><span>&nbsp;</span>Validate / Enroll / Edit</button><span style="display:none;">&nbsp;</span></div>
+
+<div class="isSSS_ShCtSchWrp selected isSSS_ShCtTm1246UGRD">
+<h2>Enrolled Courses - Summer 2024</h2>
+
+<div class="isSSS_ShCtEmpWrp">
+<p>You have no enrolled courses for this term.&nbsp;Please submit from the Pending Shopping Cart to enroll in classes.</p>
+</div>
+</div>
+
+<div class="isSSS_ShCtSchWrp isSSS_ShCtTm1244UGRD">
+<h2>Enrolled Courses - Spring 2024</h2>
+
+<div class="isSSS_AcademicStandWrap"><button style="border: none !important;" href="#" class="NYUexpand" aria-expanded="false" id="NYUbutton_AcademicStand1244UGRD" aria-controls="NYUdiv_AcademicStand1244UGRD" onclick="NYUToggleAcadStand('1244UGRD')"><span>&nbsp;</span>Academic Standing</button> 
+
+<div class="isSSS_AcademicStand" id="NYUdiv_AcademicStand1244UGRD" aria-labelledby="NYUbutton_AcademicStand1244UGRD"><span class="isSSS_NoWrap">Good Standing</span></div>
+</div>
+
+<table id="isSSS_ShCtSchTable" class="isSSS_ShCtSchTable accordion-table" summary="Enrolled Courses" title="Enrolled Courses">
+<tbody><tr class=" hidden-accordion-row">
+<th onclick="sortClassTable(0,'isSSS_ShCtSchTable')" id="tbl_Course_2_1244" class=" hidden-accordion-row">Course&nbsp;(Units)</th>
+<th onclick="sortClassTable(1,'isSSS_ShCtSchTable')" id="tbl_Instructor_2_1244" class=" hidden-accordion-row">Instructor</th>
+<th onclick="sortClassTable(2,'isSSS_ShCtSchTable')" id="tbl_Location_2_1244" class=" hidden-accordion-row">Instruction Mode and Location</th>
+<th onclick="sortClassTable(3,'isSSS_ShCtSchTable')" id="tbl_Time_2_1244" class=" hidden-accordion-row">Time</th>
+<th onclick="sortClassTable(4,'isSSS_ShCtSchTable')" id="tbl_Day_2_1244" class=" hidden-accordion-row">Day</th>
+<th onclick="sortClassTable(5,'isSSS_ShCtSchTable')" id="tbl_StartDate_2_1244" class=" hidden-accordion-row">Dates</th>
+<th id="tbl_Eval_1244" class=" hidden-accordion-row">Eval<a title="Course Feedback Note" href="javascript:void(0);" class="NYUEvalInfo" onclick="NYUshowBlueMessage(1244)"></a> 
+
+<div id="NYUBlueMessage_large1244">
+<p title="Course Feedback Message">There is a 24hour delay in Albert status updates related to Blue Course Feedback submission.</p>
+
+ <a title="Close Message" href="javascript:void(0);" id="NYUBlueMsgClose1244" onclick="NYUcloseBlueMessage(1244)">Close</a></div>
+</th>
+<th onclick="sortClassTable(7,'isSSS_ShCtSchTable')" id="tbl_URL_2_1244" class=" hidden-accordion-row">URL</th>
+<th id="tbl_Deadlines_2_1244" class=" hidden-accordion-row">Deadlines</th>
+</tr>
+
+<tr class=" accordion-row accordion-row-open" style="height: 0px;">
+<td headers="tbl_Course_2_1244" class=" accordion-head" data-label="Course(Units)">
+<div class="isSSS_CourseTitle">
+<p title="Algorithms" data-crseid="208980" data-term="1244" data-classsection="001">Algorithms<br>
+CSCI-SHU&nbsp; 220<br>
+&nbsp;001&nbsp;(4)</p>
+</div>
+</td>
+<td headers="tbl_Instructor_2_1244" class=" accordion-data" data-label="Instructor"><span data-key="208980_1">Xue</span></td>
+<td headers="tbl_Location_2_1244" class=" accordion-data" data-label="Instruction Mode and Location"><span>In-Person:</span><span>567 West Yangsi Rd, Shanghai Room N202</span><span>Loc:Shanghai</span></td>
+<td headers="tbl_Time_2_1244" class=" accordion-data" data-label="Time"><span>12:45 PM -<br>
+2:00 PM</span></td>
+<td headers="tbl_Day_2_1244" class=" accordion-data" data-label="Day"><span>MoWe</span></td>
+<td headers="tbl_StartDate_2_1244" class=" accordion-data" data-label="Dates"><span>1/22/2024 -<br>
+5/10/2024</span></td>
+<td headers="tbl_Eval_1244" data-label-nyu="Eval" class=" accordion-data" data-label="">
+<div id="NYU_Eval_Blue_info6023"><a title="Course Eval Link" href="javascript:void(0);" aria-label="Course Eval Link for Course ID 208980" class="nyuClassEval disabled"><span>&nbsp;</span></a> 
+
+<div id="NYUEvalInfo_medsmall6023"><a title="Course Feedback Note" onclick="NYUshowBlueMessage_medsmall();" href="javascript:void(0);" class="NYUEvalInfo"></a></div>
+</div>
+</td>
+<td headers="tbl_URL_2_1244" class=" accordion-data" data-label="URL"><a target="_self" href="#" class="nyuClassURL disabled"><span>&nbsp;</span></a></td>
+<td headers="tbl_Deadlines_2_1244" class=" accordion-data" data-label="Deadlines"><a href="javascript:void(0);" data-cref="IS_DS_CS_SECTION" id="isDeadlinesLnk6023" onclick="IS.ED.OpenLightbox(this, '?group=NYU_SSS_CLASS_DEADLINES&amp;section=SSS_CLASS_DEADLINES&amp;ACAD_CAREER=UGRD&amp;INSTITUTION=NYUNV&amp;STRM=1244&amp;CLASS_NBR=6023', 'iHTML','','');" title="Click to view Class Deadlines"><span>&nbsp;</span></a></td>
+</tr>
+
+<tr class=" accordion-row accordion-row-closed" style="height: 0px;">
+<td headers="tbl_Course_2_1244" class=" accordion-head" data-label="Course(Units)">
+<div class="isSSS_CourseTitle">
+<p title="Algorithms" data-crseid="208980" data-term="1244" data-classsection="002">Algorithms<br>
+CSCI-SHU&nbsp; 220<br>
+&nbsp;002</p>
+</div>
+</td>
+<td headers="tbl_Instructor_2_1244" class=" accordion-data" data-label="Instructor"><span data-key="208980_1">Yin</span></td>
+<td headers="tbl_Location_2_1244" class=" accordion-data" data-label="Instruction Mode and Location"><span>In-Person:</span><span>567 West Yangsi Rd, Shanghai Room N202</span><span>Loc:Shanghai</span></td>
+<td headers="tbl_Time_2_1244" class=" accordion-data" data-label="Time"><span>12:45 PM -<br>
+2:00 PM</span></td>
+<td headers="tbl_Day_2_1244" class=" accordion-data" data-label="Day"><span>Fr</span></td>
+<td headers="tbl_StartDate_2_1244" class=" accordion-data" data-label="Dates"><span>1/22/2024 -<br>
+5/10/2024</span></td>
+<td headers="tbl_Eval_1244" data-label-nyu="Eval" class=" accordion-data" data-label="">
+<div id="NYU_Eval_Blue_info6025"><a title="Course Eval Link" href="javascript:void(0);" aria-label="Course Eval Link for Course ID 208980" class="nyuClassEval disabled"><span>&nbsp;</span></a> 
+
+<div id="NYUEvalInfo_medsmall6025"><a title="Course Feedback Note" onclick="NYUshowBlueMessage_medsmall();" href="javascript:void(0);" class="NYUEvalInfo"></a></div>
+</div>
+</td>
+<td headers="tbl_URL_2_1244" class=" accordion-data" data-label="URL"><a target="_self" href="#" class="nyuClassURL disabled"><span>&nbsp;</span></a></td>
+<td headers="tbl_Deadlines_2_1244" class=" accordion-data" data-label="Deadlines"><a href="javascript:void(0);" data-cref="IS_DS_CS_SECTION" id="isDeadlinesLnk6025" onclick="IS.ED.OpenLightbox(this, '?group=NYU_SSS_CLASS_DEADLINES&amp;section=SSS_CLASS_DEADLINES&amp;ACAD_CAREER=UGRD&amp;INSTITUTION=NYUNV&amp;STRM=1244&amp;CLASS_NBR=6025', 'iHTML','','');" title="Click to view Class Deadlines"><span>&nbsp;</span></a></td>
+</tr>
+
+<tr class=" accordion-row accordion-row-closed" style="height: 0px;">
+<td headers="tbl_Course_2_1244" class=" accordion-head" data-label="Course(Units)">
+<div class="isSSS_CourseTitle">
+<p title="Software Engineering" data-crseid="208992" data-term="1244" data-classsection="001">Software Engineering<br>
+CSCI-SHU&nbsp; 410<br>
+&nbsp;001&nbsp;(4)</p>
+</div>
+</td>
+<td headers="tbl_Instructor_2_1244" class=" accordion-data" data-label="Instructor"><span data-key="208992_1">Xu</span></td>
+<td headers="tbl_Location_2_1244" class=" accordion-data" data-label="Instruction Mode and Location"><span>In-Person:</span><span>567 West Yangsi Rd, Shanghai Room S311</span><span>Loc:Shanghai</span></td>
+<td headers="tbl_Time_2_1244" class=" accordion-data" data-label="Time"><span>3:45 PM -<br>
+5:00 PM</span></td>
+<td headers="tbl_Day_2_1244" class=" accordion-data" data-label="Day"><span>TuTh</span></td>
+<td headers="tbl_StartDate_2_1244" class=" accordion-data" data-label="Dates"><span>1/22/2024 -<br>
+5/10/2024</span></td>
+<td headers="tbl_Eval_1244" data-label-nyu="Eval" class=" accordion-data" data-label="">
+<div id="NYU_Eval_Blue_info6036"><a title="Course Eval Link" href="javascript:void(0);" aria-label="Course Eval Link for Course ID 208992" class="nyuClassEval disabled"><span>&nbsp;</span></a> 
+
+<div id="NYUEvalInfo_medsmall6036"><a title="Course Feedback Note" onclick="NYUshowBlueMessage_medsmall();" href="javascript:void(0);" class="NYUEvalInfo"></a></div>
+</div>
+</td>
+<td headers="tbl_URL_2_1244" class=" accordion-data" data-label="URL"><a target="_self" href="#" class="nyuClassURL disabled"><span>&nbsp;</span></a></td>
+<td headers="tbl_Deadlines_2_1244" class=" accordion-data" data-label="Deadlines"><a href="javascript:void(0);" data-cref="IS_DS_CS_SECTION" id="isDeadlinesLnk6036" onclick="IS.ED.OpenLightbox(this, '?group=NYU_SSS_CLASS_DEADLINES&amp;section=SSS_CLASS_DEADLINES&amp;ACAD_CAREER=UGRD&amp;INSTITUTION=NYUNV&amp;STRM=1244&amp;CLASS_NBR=6036', 'iHTML','','');" title="Click to view Class Deadlines"><span>&nbsp;</span></a></td>
+</tr>
+
+<tr class=" accordion-row accordion-row-closed" style="height: 0px;">
+<td headers="tbl_Course_2_1244" class=" accordion-head" data-label="Course(Units)">
+<div class="isSSS_CourseTitle">
+<p title="Computer Sci Independent Study" data-crseid="223227" data-term="1244" data-classsection="002">Computer Science Independent Study<br>
+CSCI-SHU&nbsp; 997<br>
+&nbsp;002&nbsp;(4)</p>
+</div>
+</td>
+<td headers="tbl_Instructor_2_1244" class=" accordion-data" data-label="Instructor"><span data-key="223227_1">Guo</span></td>
+<td headers="tbl_Location_2_1244" class=" accordion-data" data-label="Instruction Mode and Location"><span>In-Person:</span><span>No Room Required</span><span>Loc:Shanghai</span></td>
+<td headers="tbl_Time_2_1244" class=" accordion-data" data-label="Time"><span>TBA</span></td>
+<td headers="tbl_Day_2_1244" class=" accordion-data" data-label="Day"><span>TBA</span></td>
+<td headers="tbl_StartDate_2_1244" class=" accordion-data" data-label="Dates"><span>1/22/2024 -<br>
+5/10/2024</span></td>
+<td headers="tbl_Eval_1244" data-label-nyu="Eval" class=" accordion-data" data-label="">
+<div id="NYU_Eval_Blue_info23313"><a title="Course Eval Link" href="javascript:void(0);" aria-label="Course Eval Link for Course ID 223227" class="nyuClassEval disabled"><span>&nbsp;</span></a> 
+
+<div id="NYUEvalInfo_medsmall23313"><a title="Course Feedback Note" onclick="NYUshowBlueMessage_medsmall();" href="javascript:void(0);" class="NYUEvalInfo"></a></div>
+</div>
+</td>
+<td headers="tbl_URL_2_1244" class=" accordion-data" data-label="URL"><a target="_self" href="#" class="nyuClassURL disabled"><span>&nbsp;</span></a></td>
+<td headers="tbl_Deadlines_2_1244" class=" accordion-data" data-label="Deadlines"><a href="javascript:void(0);" data-cref="IS_DS_CS_SECTION" id="isDeadlinesLnk23313" onclick="IS.ED.OpenLightbox(this, '?group=NYU_SSS_CLASS_DEADLINES&amp;section=SSS_CLASS_DEADLINES&amp;ACAD_CAREER=UGRD&amp;INSTITUTION=NYUNV&amp;STRM=1244&amp;CLASS_NBR=23313', 'iHTML','','');" title="Click to view Class Deadlines"><span>&nbsp;</span></a></td>
+</tr>
+</tbody></table>
+
+<div class="EnrollmentButtons"><button type="button" data-cref="IS_ED_CS_EDIT_COURSE" class="isSSS_ShCtDCbtn" onclick="nyuShowFluidComponentLB('NYU_IS_ED_CS_EDIT_COURSE','IS.SSS.RefreshMenuItem(\'IS_ED_SSS_SUMMARY\',function(){IS.SSS.CartCareerSelect($(\'IS_SSS_ShCtCarUGRDLnk\'));IS.ED.MakeTablesResponsivePostLoad(document.getElementsByClassName($(\'IS_SSS_ShCtCarUGRDLnk\').getAttribute(\'data-careerclass\'))[0]);IS.SSS.ShopCartTermSelect($(\'IS_SSS_ShCtTm1244UGRDLnk\'));makeTablesResponsivePostLoad($(\'IS_SSS_ShCtTm1244UGRDLnk\').parentNode);})','?Page=NYU_SSENRL_EDIT_FL&amp;Action=A&amp;STRM=1244&amp;ACAD_CAREER=UGRD&amp;EMPLID=14735289&amp;ENRL_REQUEST_ID=&amp;INSTITUTION=NYUNV');"><span>&nbsp;</span>Edit</button><button type="button" data-cref="NYU_EDIT_SWAP" class="isSSS_ShCtDCbtn" onclick="nyuShowFluidComponentLB('NYU_EDIT_SWAP','IS.SSS.RefreshMenuItem(\'IS_ED_SSS_SUMMARY\',function(){IS.SSS.CartCareerSelect($(\'IS_SSS_ShCtCarUGRDLnk\'));IS.ED.MakeTablesResponsivePostLoad(document.getElementsByClassName($(\'IS_SSS_ShCtCarUGRDLnk\').getAttribute(\'data-careerclass\'))[0]);IS.SSS.ShopCartTermSelect($(\'IS_SSS_ShCtTm1244UGRDLnk\'));makeTablesResponsivePostLoad($(\'IS_SSS_ShCtTm1244UGRDLnk\').parentNode);})','?Page=NYU_SSR_SSENRL_WTL&amp;Action=A&amp;STRM=1244&amp;ACAD_CAREER=UGRD&amp;EMPLID=14735289&amp;ENRL_REQUEST_ID=&amp;INSTITUTION=NYUNV');"><span>&nbsp;</span>Edit Swap</button><button type="button" data-cref="NYU_IS_ED_CS_DROP_COURSE" class="isSSS_ShCtDCbtn" onclick="nyuShowFluidComponentLB('NYU_IS_ED_CS_DROP_COURSE','IS.SSS.RefreshMenuItem(\'IS_ED_SSS_SUMMARY\',function(){IS.SSS.CartCareerSelect($(\'IS_SSS_ShCtCarUGRDLnk\'));IS.ED.MakeTablesResponsivePostLoad(document.getElementsByClassName($(\'IS_SSS_ShCtCarUGRDLnk\').getAttribute(\'data-careerclass\'))[0]);IS.SSS.ShopCartTermSelect($(\'IS_SSS_ShCtTm1244UGRDLnk\'));makeTablesResponsivePostLoad($(\'IS_SSS_ShCtTm1244UGRDLnk\').parentNode);})','?Page=NYU_SSENRL_DROP_FL&amp;Action=A&amp;STRM=1244&amp;ACAD_CAREER=UGRD&amp;EMPLID=14735289&amp;ENRL_REQUEST_ID=&amp;INSTITUTION=NYUNV');"><span>&nbsp;</span>Drop</button><button type="button" data-cref="IS_ED_CS_SWAP_COURSE" class="isSSS_ShCtDCbtn" onclick="nyuShowFluidComponentLB('NYU_IS_ED_CS_SWAP_COURSE','IS.SSS.RefreshMenuItem(\'IS_ED_SSS_SUMMARY\',function(){IS.SSS.CartCareerSelect($(\'IS_SSS_ShCtCarUGRDLnk\'));IS.ED.MakeTablesResponsivePostLoad(document.getElementsByClassName($(\'IS_SSS_ShCtCarUGRDLnk\').getAttribute(\'data-careerclass\'))[0]);IS.SSS.ShopCartTermSelect($(\'IS_SSS_ShCtTm1244UGRDLnk\'));makeTablesResponsivePostLoad($(\'IS_SSS_ShCtTm1244UGRDLnk\').parentNode);})','?Page=NYU_SSENRL_SWAP_FL&amp;Action=A&amp;STRM=1244&amp;ACAD_CAREER=UGRD&amp;EMPLID=14735289&amp;ENRL_REQUEST_ID=&amp;INSTITUTION=NYUNV');"><span>&nbsp;</span>Swap</button></div>
+
+<div class="EditSwapdiv"><button onclick="Toggle_EditSwapInfo();" aria-expanded="false" id="EditSwaplink_UGRD1244" aria-controls="EditSwaplink_UGRD1244_info" title="Help on Registration Buttons"><span style="pointer-events:none;">&nbsp;</span>Help on Registration Buttons</button> 
+
+<div style="display:none;" class="EditSwapInfoTextLink" id="EditSwaplink_UGRD1244_info">
+<div class="EditSwapInfoText" id="EditSwapInfoUGRD1244_inner"><b>When applicable, the Edit button will allow you to change the variable unit, grading scheme and lab/recitation sections of your enrolled class. <br><br> Use the Edit/Swap button to designate (or change) a SWAP option for any of your waitlisted courses.<br><br>Use the Drop button to drop an enrolled or waitlisted class.<br><br>The Swap button allows you to indicate an enrolled class that you are willing to be dropped if you become enrolled or waitlisted in another class.</b><br><br><p style="margin-top:5px;"><a href="https://www.nyu.edu/students/student-information-and-resources/registration-records-and-graduation/albert-help/training/students/registration/add.html" target="_blank">More Info </a></p></div>
+
+<script type="text/javascript" language="javascript">
+ var target = "EditSwapInfo" + "UGRD" + "1244" + "_inner"; document.getElementById(target).innerHTML = "<b>When applicable, the Edit button will allow you to change the variable unit, grading scheme and lab/recitation sections of your enrolled class. <br><br> Use the Edit/Swap button to designate (or change) a SWAP option for any of your waitlisted courses.<br><br>Use the Drop button to drop an enrolled or waitlisted class.<br><br>The Swap button allows you to indicate an enrolled class that you are willing to be dropped if you become enrolled or waitlisted in another class.<\/b><br><br><p style='margin-top:5px;'><a href='https://www.nyu.edu/students/student-information-and-resources/registration-records-and-graduation/albert-help/training/students/registration/add.html' target='_blank' >More Info <\/a><\/p>"; 
+</script>
+</div>
+</div>
+</div>
+
+<div class="isSSS_ShCtSchWrp isSSS_ShCtTm1246UGRD selected">
+<h2>Exam Schedule - Summer 2024</h2>
+
+<p>An exam schedule is not available for this term.</p>
+</div>
+
+<div class="isSSS_ShCtSchWrp isSSS_ShCtTm1244UGRD">
+<h2>Exam Schedule - Spring 2024</h2>
+
+<table title="Exam Schedule" summary="Exam Schedule" id="nyuExamSchTable" class="isSSS_ShCtSchTable accordion-table">
+<tbody>
+<tr class=" hidden-accordion-row">
+<th onclick="sortClassTable(0,'nyuExamSchTable')" id="tbl_Class" class=" hidden-accordion-row">Class</th>
+<th onclick="sortClassTable(1,'nyuExamSchTable')" id="tbl_Description" class=" hidden-accordion-row">Description</th>
+<th onclick="sortClassTable(2,'nyuExamSchTable')" id="tbl_ExamType" class=" hidden-accordion-row">Exam Type</th>
+<th onclick="sortClassTable(3,'nyuExamSchTable')" id="tbl_ExamDate" class=" hidden-accordion-row">Exam Date</th>
+<th onclick="sortClassTable(4,'nyuExamSchTable')" id="tbl_Schedule" class=" hidden-accordion-row">Schedule</th>
+<th onclick="sortClassTable(5,'nyuExamSchTable')" id="tbl_Room" class=" hidden-accordion-row">Room</th>
+</tr>
+
+<tr>
+<td headers="tbl_Class" data-label="Class" class=" accordion-data"><span>CSCI-SHU 220-001 (6023)</span></td>
+<td headers="tbl_Description" data-label="Description" class=" accordion-data"><span>Algorithms (Lecture)</span></td>
+<td headers="tbl_ExamType" data-label="Exam Type" class=" accordion-data"><span>Final</span></td>
+<td headers="tbl_ExamDate" data-label="Exam Date" class=" accordion-data"><span>05/14/2024</span></td>
+<td headers="tbl_Schedule" data-label="Schedule" class=" accordion-data"><span>2:00PM - 4:00PM</span></td>
+<td headers="tbl_Room" data-label="Room" class=" accordion-data"><span>567 West Yangsi Rd, Shanghai Room N208 Loc: Shanghai</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="nyuSSSHomeLinksStatic" class="isSSS_FullW">
+<h2>Additional Links</h2>
+
+<div class="is_bb_LinkContainer">
+<div class="is_bb_LinkColumn oneColumnDisplay">
+<ul>
+<li class="is_bb_LinkItem"><a title="Request Term/Total Withdrawal" href="javascript:nyuShowFluidComponentLB('NYU_LEAVES_WDR_FLUID');" aria-label="Request Term/Total Withdrawal">Request Term/Total Withdrawal</a></li>
+
+<li class="is_bb_LinkItem"><a title="Request Leave of Absence" href="javascript:nyuShowFluidComponentLB('NYU_LEAVES_WDR_FLUID');" aria-label="Request Leave of Absence">Request Leave of Absence</a></li>
+
+<li class="is_bb_LinkItem"><a title="Check Registration Status" href="javascript:nyuShowFluidComponentLB('NYU_CHECK_REGISTRATION_STATUS');" data-cref="NYU_CHECK_REGISTRATION_STATUS" aria-label="Check Registration Status">Check Registration Status</a></li>
+
+<li class="is_bb_LinkItem"><a title="Course Feedback Results" href="javascript:nyuShowFluidComponentLB('NYU_EVAL_PUBLISHED_RESULTS');" data-cref="NYU_EVAL_PUBLISHED_RESULTS" aria-label="Course Feedback Results">Course Feedback Results</a></li>
+
+<li class="is_bb_LinkItem"><a title="Registration Guide" href="javascript:nyuShowFluidComponentLB('NYU_REGISTRATION_GUIDE');" data-cref="NYU_REGISTRATION_GUIDE" aria-label="Registration Guide">Registration Guide</a></li>
+</ul>
+</div>
+</div>
+
+<div id="HelpLink"><a target="_blank" href="https://www.nyu.edu/students/student-information-and-resources/registration-records-and-graduation/contact-registrar.html" title="Contact the Registrar Team link">Contact the Registrar Team</a></div>
+</div>
+</div>
+</div>
+
+<!--End target: TargetContent --></span></span>
+
+
+
+</div>
+
+<div role="main" class="isSSS_Main loading" id="NYU_ED_SSS_ACADEMICSWrp">&nbsp;</div>
+
+<div role="main" class="isSSS_Main selected" id="IS_ED_SSS_GRADESWrp">
+<!--
+Copyright (c) 2000, 2022, Oracle and/or its affiliates. -->
+
+<script type="text/javascript">
+var bPSHTMLtemplate = true; var nLastAccessTime = (new Date()).getTime();
+</script>
+
+<style type="text/css">
+.isSSS_CWrpUGRD {
+ display: none !important; }
+ .CareerSelect_UGRD .isSSS_CWrpUGRD {
+ display:block!important; }
+</style>
+
+<title>Section Default (CS)</title>
+
+
+<span><span id="IS_AC_RESPONSE"><!--Begin target: TargetContent URL: https%3A%2F%2Fsis.nyu.edu%2Fpsc%2Fcsprod%2FEMPLOYEE%2FSA%2Fs%2FWEBLIB_IS_DS.ISCRIPT1.FieldFormula.IScript_DrawSection%3Fgroup%3DIS_ED_SSS_GRADES%26section%3DSSS_GRADES_ALL-->
+<div class="ptprtlcontainer">
+<div class="isDS_Section CareerSelect_UGRD" groupid="IS_ED_SSS_GRADES" sectionid="SSS_GRADES_ALL">
+<div id="nyuGradesLinks" class="isSSS_FullW"><div class="is_bb_LinkContainer">
+ <div class="is_bb_LinkColumn twoColumnDisplay">
+ <ul>
+ <li class="is_bb_LinkItem"><a aria-label="E-Diploma" title="E-Diploma" href="javascript:nyuShowFluidComponentLB('NYU_E_DIPLOMA_FL');">E-Diploma</a>
+ </li>
+ <li class="is_bb_LinkItem"><a aria-label="Enrollment Verification" title="Enrollment Verification" href="javascript:isOpenLink('https://sis.portal.nyu.edu/psp/ihprod_newwin/EMPLOYEE/SA/s/WEBLIB_NYU_NSC.HTML_POST.FieldFormula.IScript_NYU_Stdnt_Link_to_NSC?&amp;cmd=uninav&amp;Rnode=SA&amp;uninavpath=Root{PORTAL_ROOT_OBJECT}.NYU - Hidden{NYU_HIDDEN}.Student Self Service - Hidden{NYU_SSS_HIDDEN}.Grades - Hidden{NYU_GRADES_HIDDEN}', '_blank');">Enrollment Verification</a>
+ </li>
+ <li class="is_bb_LinkItem"><a aria-label="MyHub-Enrollment Verification" title="MyHub-Enrollment Verification" href="javascript:nyuShowFluidComponentLB('NYU_ENROLLMENT_MYHUB');">MyHub-Enrollment Verification</a>
+ </li>
+ <li class="is_bb_LinkItem"><a aria-label="Test Scores" title="Test Scores" href="javascript:nyuShowFluidComponentLB('NYU_TEST_SCORES');">Test Scores</a>
+ </li>
+ </ul>
+ </div>
+ <div class="is_bb_LinkColumn twoColumnDisplay">
+ <ul>
+ <li class="is_bb_LinkItem"><a aria-label="Transcripts Official" title="Transcripts Official" href="javascript:nyuShowFluidComponentLB('NYU_TRANSCRIPTS_OFFICIAL');">Transcripts Official</a>
+ </li>
+ <li class="is_bb_LinkItem"><a aria-label="Transcripts Unofficial" title="View Transcript" href="javascript:nyuShowFluidComponentLB('NYU_TRANSCRIPTS_UNOFFICIAL');">Transcripts Unofficial</a>
+ </li>
+ <li class="is_bb_LinkItem"><a aria-label="Transfer Credit Report" title="Transfer Credit Report" href="javascript:nyuShowFluidComponentLB('NYU_TRANSFER_CREDIT_REPORT');">Transfer Credit Report</a>
+ </li>
+ </ul>
+ </div>
+</div>
+</div>
+
+<script type="text/javascript" id="GradesCareerSelectScriptId">
+iAddClass($("GradesCareerSelectScriptId").parentNode,"CareerSelect_UGRD");
+</script>
+
+ 
+
+<div class="isSSS_CareerSelect"><span>Viewing:</span><a onclick="IS.SSS.CareerSelect(this);" href="javascript:void(0);" class="selected" id="CareerSelect_UGRD">Undergraduate<span>:&nbsp;UI-Shanghai&nbsp;/&nbsp;Computer Science</span></a></div>
+
+<div class="isSSS_FullW isSSS_noBkBr isSSS_GradesTop isSSS_CWrpUGRD">
+<h2>Cumulative GPA: 0.001</h2>
+</div>
+
+<div class="isSSS_FullW isSSS_GradesTwrp open isSSS_CWrpUGRD"><a onclick="IS.SSS.ToggleGradesYear(this);" href="javascript:void(0);"><span>&nbsp;</span>2023 - 2024&nbsp;Academic Year</a> 
+
+<div>
+<h3>Spring 2024</h3>
+
+<div class="GradesTranscriptInfo"><span class="isFloatLeft">Term GPA: Not Calculated</span><span class="isFloatLeft">Credit Enrolled: 12</span><span class="isFloatRight">Program: UI-Shanghai</span><span class="isFloatLeft">Level: Senior</span><span class="isFloatLeft">Academic Standing: Good Standing</span><span class="isFloatRight">Plan: Computer Science, Mathematics</span></div>
+
+<table summary="Spring 2024&nbsp;UGRD&nbsp;Grade Roster" title="Spring 2024&nbsp;UGRD&nbsp;Grade Roster" class=" accordion-table">
+<tbody><tr class=" hidden-accordion-row">
+<th id="tblSpring2024UGRD_CatalogNumber" class=" hidden-accordion-row">Catalog Number</th>
+<th id="tblSpring2024UGRD_Title" class=" hidden-accordion-row">Title</th>
+<th id="tblSpring2024UGRD_Professor" class=" hidden-accordion-row">Instructor</th>
+<th id="tblSpring2024UGRD_Credits" class=" hidden-accordion-row">Credits</th>
+<th id="tblSpring2024UGRD_MidTermGrade" class=" hidden-accordion-row">Midterm Grade</th>
+<th id="tblSpring2024UGRD_Grade" class=" hidden-accordion-row">Final Grade</th>
+</tr>
+
+<tr class=" accordion-row accordion-row-open" style="height: 198px;">
+<td headers="tblSpring2024UGRD_CatalogNumber" class=" accordion-head" data-label="Catalog Number">CSCI-SHU - 220</td>
+<td headers="tblSpring2024UGRD_Title" class=" accordion-data" data-label="Title">Algorithms</td>
+<td headers="tblSpring2024UGRD_Professor" class=" accordion-data" data-label="Instructor">Xue&nbsp;</td>
+<td headers="tblSpring2024UGRD_Credits" class=" accordion-data" data-label="Credits">4</td>
+<td headers="tblSpring2024UGRD_MidTermGrade" class=" accordion-data" data-label="Midterm Grade">&nbsp;</td>
+<td headers="tblSpring2024UGRD_Grade" class=" accordion-data" data-label="Final Grade">&nbsp;</td>
+</tr>
+
+<tr class=" accordion-row accordion-row-closed" style="height: 33px;">
+<td headers="tblSpring2024UGRD_CatalogNumber" class=" accordion-head" data-label="Catalog Number">CSCI-SHU - 410</td>
+<td headers="tblSpring2024UGRD_Title" class=" accordion-data" data-label="Title">Software Engineering</td>
+<td headers="tblSpring2024UGRD_Professor" class=" accordion-data" data-label="Instructor">Xu&nbsp;</td>
+<td headers="tblSpring2024UGRD_Credits" class=" accordion-data" data-label="Credits">4</td>
+<td headers="tblSpring2024UGRD_MidTermGrade" class=" accordion-data" data-label="Midterm Grade">&nbsp;</td>
+<td headers="tblSpring2024UGRD_Grade" class=" accordion-data" data-label="Final Grade">&nbsp;</td>
+</tr>
+
+<tr class=" accordion-row accordion-row-closed" style="height: 33px;">
+<td headers="tblSpring2024UGRD_CatalogNumber" class=" accordion-head" data-label="Catalog Number">CSCI-SHU - 997</td>
+<td headers="tblSpring2024UGRD_Title" class=" accordion-data" data-label="Title">Computer Sci Independent Study</td>
+<td headers="tblSpring2024UGRD_Professor" class=" accordion-data" data-label="Instructor">Guo&nbsp;</td>
+<td headers="tblSpring2024UGRD_Credits" class=" accordion-data" data-label="Credits">4</td>
+<td headers="tblSpring2024UGRD_MidTermGrade" class=" accordion-data" data-label="Midterm Grade">&nbsp;</td>
+<td headers="tblSpring2024UGRD_Grade" class=" accordion-data" data-label="Final Grade">&nbsp;</td>
+</tr>
+</tbody></table>
+</div>
+
+<div>
+<h3>Fall 2023</h3>
+
+<div class="GradesTranscriptInfo"><span class="isFloatLeft">Term GPA: 3.715</span><span class="isFloatLeft">Credit Enrolled: 14</span><span class="isFloatRight">Program: UI-Shanghai</span><span class="isFloatLeft">Level: Senior</span><span class="isFloatLeft">Academic Standing: Good Standing</span><span class="isFloatRight">Plan: Computer Science, Mathematics</span></div>
+
+<table summary="Fall 2023&nbsp;UGRD&nbsp;Grade Roster" title="Fall 2023&nbsp;UGRD&nbsp;Grade Roster" class=" accordion-table">
+<tbody><tr class=" hidden-accordion-row">
+<th id="tblFall2023UGRD_CatalogNumber" class=" hidden-accordion-row">Catalog Number</th>
+<th id="tblFall2023UGRD_Title" class=" hidden-accordion-row">Title</th>
+<th id="tblFall2023UGRD_Professor" class=" hidden-accordion-row">Instructor</th>
+<th id="tblFall2023UGRD_Credits" class=" hidden-accordion-row">Credits</th>
+<th id="tblFall2023UGRD_MidTermGrade" class=" hidden-accordion-row">Midterm Grade</th>
+<th id="tblFall2023UGRD_Grade" class=" hidden-accordion-row">Final Grade</th>
+</tr>
+
+<tr class=" accordion-row accordion-row-open" style="height: 198px;">
+<td headers="tblFall2023UGRD_CatalogNumber" class=" accordion-head" data-label="Catalog Number">MUS-SHU - 152</td>
+<td headers="tblFall2023UGRD_Title" class=" accordion-data" data-label="Title">Group Guqin, All Levels</td>
+<td headers="tblFall2023UGRD_Professor" class=" accordion-data" data-label="Instructor">Dai&nbsp;</td>
+<td headers="tblFall2023UGRD_Credits" class=" accordion-data" data-label="Credits">2</td>
+<td headers="tblFall2023UGRD_MidTermGrade" class=" accordion-data" data-label="Midterm Grade">&nbsp;</td>
+<td headers="tblFall2023UGRD_Grade" class=" accordion-data" data-label="Final Grade">A</td>
+</tr>
+
+<tr class=" accordion-row accordion-row-closed" style="height: 33px;">
+<td headers="tblFall2023UGRD_CatalogNumber" class=" accordion-head" data-label="Catalog Number">CCSF-SHU - 123</td>
+<td headers="tblFall2023UGRD_Title" class=" accordion-data" data-label="Title">Cont Chinese Political Thought</td>
+<td headers="tblFall2023UGRD_Professor" class=" accordion-data" data-label="Instructor">Wu&nbsp;</td>
+<td headers="tblFall2023UGRD_Credits" class=" accordion-data" data-label="Credits">4</td>
+<td headers="tblFall2023UGRD_MidTermGrade" class=" accordion-data" data-label="Midterm Grade">B+</td>
+<td headers="tblFall2023UGRD_Grade" class=" accordion-data" data-label="Final Grade">A-</td>
+</tr>
+
+<tr class=" accordion-row accordion-row-closed" style="height: 33px;">
+<td headers="tblFall2023UGRD_CatalogNumber" class=" accordion-head" data-label="Catalog Number">CSCI-SHU - 375</td>
+<td headers="tblFall2023UGRD_Title" class=" accordion-data" data-label="Title">Reinforcement Learning</td>
+<td headers="tblFall2023UGRD_Professor" class=" accordion-data" data-label="Instructor">Lauriere&nbsp;</td>
+<td headers="tblFall2023UGRD_Credits" class=" accordion-data" data-label="Credits">4</td>
+<td headers="tblFall2023UGRD_MidTermGrade" class=" accordion-data" data-label="Midterm Grade">&nbsp;</td>
+<td headers="tblFall2023UGRD_Grade" class=" accordion-data" data-label="Final Grade">A-</td>
+</tr>
+
+<tr class=" accordion-row accordion-row-closed" style="height: 33px;">
+<td headers="tblFall2023UGRD_CatalogNumber" class=" accordion-head" data-label="Catalog Number">CSCI-SHU - 420</td>
+<td headers="tblFall2023UGRD_Title" class=" accordion-data" data-label="Title">CS Senior Project</td>
+<td headers="tblFall2023UGRD_Professor" class=" accordion-data" data-label="Instructor">Spathis&nbsp;</td>
+<td headers="tblFall2023UGRD_Credits" class=" accordion-data" data-label="Credits">4</td>
+<td headers="tblFall2023UGRD_MidTermGrade" class=" accordion-data" data-label="Midterm Grade">&nbsp;</td>
+<td headers="tblFall2023UGRD_Grade" class=" accordion-data" data-label="Final Grade">A-</td>
+</tr>
+</tbody></table>
+</div>
+</div>
+
+<div class="isSSS_FullW isSSS_GradesTwrp open isSSS_CWrpUGRD"><a onclick="IS.SSS.ToggleGradesYear(this);" href="javascript:void(0);"><span>&nbsp;</span>2022 - 2023&nbsp;Academic Year</a> 
