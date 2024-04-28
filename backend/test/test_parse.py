@@ -31,7 +31,7 @@ if __name__ == '__main__':
     test_path = True
 
     for file in ['test_case1.txt', 'test_case2.txt', 'test_case3.txt', 'test_case4.txt', 'test_case5.txt', 'test_case6.txt']:
-        # pdb.set_trace()
+
         with open(os.path.join('./backend/test/course_history_tests', file), 'r') as f:
             text = f.read()
             name, gpa, course_dict = parse_course_history(text)

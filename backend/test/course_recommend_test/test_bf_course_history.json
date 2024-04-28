@@ -1,0 +1,170 @@
+{
+    "Spring 2023": [
+        [
+            "EAST-UA - 255",
+            "Elementary Korean II",
+            "4",
+            "A"
+        ],
+        [
+            "ECON-UB - 232",
+            "Data Bootcamp",
+            "3",
+            "A-"
+        ],
+        [
+            "FINC-UB - 41",
+            "Equity Valuation",
+            "3",
+            "B+"
+        ],
+        [
+            "MULT-UB - 7",
+            "Decision Models and Analytics",
+            "3",
+            "B"
+        ],
+        [
+            "MATH-UA - 235",
+            "Probability &amp; Statistics",
+            "4",
+            "A"
+        ]
+    ],
+    "Fall 2022": [
+        [
+            "MATH-UA - 140",
+            "Linear Algebra",
+            "4",
+            "A"
+        ],
+        [
+            "EAST-UA - 254",
+            "Elementary Korean I",
+            "4",
+            "A"
+        ],
+        [
+            "FINC-UB - 26",
+            "Debt Instruments and Markets",
+            "3",
+            "B+"
+        ],
+        [
+            "ECON-UB - 11",
+            "Economics of Global Business",
+            "4",
+            "A"
+        ]
+    ],
+    "Spring 2022": [
+        [
+            "BUSF-SHU - 303",
+            "Corporate Finance",
+            "4",
+            "A-"
+        ],
+        [
+            "BUSF-SHU - 142",
+            "Info Tech in Business &amp; Societ",
+            "4",
+            "B"
+        ],
+        [
+            "BUSF-SHU - 270",
+            "Financial Reporting &amp; Disclos.",
+            "4",
+            "A-"
+        ],
+        [
+            "GCHN-SHU - 283",
+            "Reading&amp;Viewing Modern China",
+            "4",
+            "A"
+        ],
+        [
+            "SOCS-SHU - 208",
+            "Cities at Crossroads",
+            "4",
+            "A"
+        ]
+    ],
+    "Fall 2021": [
+        [
+            "BUSF-SHU - 202",
+            "Foundations of Finance",
+            "4",
+            "B"
+        ],
+        [
+            "MATH-SHU - 151",
+            "Multivariable Calculus",
+            "4",
+            "A"
+        ],
+        [
+            "BUSF-SHU - 250",
+            "Princ. of Financial Accounting",
+            "4",
+            "A"
+        ],
+        [
+            "CCCF-SHU - 101W27",
+            "PoH: Memory, Identity, and Res",
+            "4",
+            "B+"
+        ]
+    ],
+    "Spring 2021": [
+        [
+            "ECON-SHU - 3",
+            "Microeconomics",
+            "4",
+            "A-"
+        ],
+        [
+            "WRIT-SHU - 101",
+            "Writing as Inquiry: WI",
+            "4",
+            "A-"
+        ],
+        [
+            "BUSF-SHU - 101",
+            "Statistics for Business &amp; Econ",
+            "4",
+            "A-"
+        ],
+        [
+            "EAP-SHU - 101B",
+            "EAP: The Visual and the Social",
+            "4",
+            "A-"
+        ]
+    ],
+    "Fall 2020": [
+        [
+            "CCSF-SHU - 101L",
+            "Global Perspectives on Society",
+            "4",
+            "B+"
+        ],
+        [
+            "EAP-SHU - 100N",
+            "EAP: Fashion Consciousness",
+            "4",
+            "B"
+        ],
+        [
+            "INTM-SHU - 103",
+            "Creative Coding Lab",
+            "4",
+            "B+"
+        ],
+        [
+            "MATH-SHU - 131",
+            "Calculus",
+            "4",
+            "A"
+        ]
+    ]
+}
