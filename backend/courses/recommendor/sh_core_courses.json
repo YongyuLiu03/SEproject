@@ -1,0 +1,238 @@
+{
+    "AT": [
+        [
+            "BUSF-SHU 210",
+            "Business Analytics"
+        ],
+        [
+            "INTM-SHU 103",
+            "Creative Coding Lab"
+        ],
+        [
+            "INTM-SHU 101",
+            "Interaction Lab"
+        ],
+        [
+            "CSCI-SHU 101",
+            "Introduction to Computer and Data Science"
+        ],
+        [
+            "CSCI-SHU 11",
+            "Introduction to Computer Programming"
+        ],
+        [
+            "PHIL-SHU 70",
+            "Logic"
+        ],
+        [
+            "MATH-SHU 252",
+            "Numerical Analysis"
+        ]
+    ],
+    "ED": [
+        [
+            "EENG-SHU 251",
+            "Circuits"
+        ],
+        [
+            "CCEX-SHU 203",
+            "Energy and the Environment"
+        ],
+        [
+            "BIOL-SHU 21",
+            "Foundations of Biology I *"
+        ],
+        [
+            "CCEX-SHU 214",
+            "How Things Work"
+        ],
+        [
+            "PSYC-SHU 101",
+            "Introduction to Psychology"
+        ],
+        [
+            "CCEX-SHU 122",
+            "Perception and the Brain"
+        ]
+    ],
+    "HPC": [
+        [
+            "GCHN-SHU 207",
+            "20th-century Chinese Writers in Global Context"
+        ],
+        [
+            "GCHN-SHU 248",
+            "Animals and Chinese Religion"
+        ],
+        [
+            "GCHN-SHU 165",
+            "China and the Islamic World, c.600AD-Present"
+        ],
+        [
+            "GCHN-SHU 264",
+            "Chinese Migrant and Diasporic Networks"
+        ],
+        [
+            "CCSF-SHU 123",
+            "Contemporary Chinese Political Thought"
+        ],
+        [
+            "GCHN-SHU 156",
+            "History of Chinese Art"
+        ],
+        [
+            "PHIL-SHU 105",
+            "Introduction to Chinese Philosophy"
+        ],
+        [
+            "GCHN-SHU 226",
+            "Queer China"
+        ],
+        [
+            "GCHN-SHU 283",
+            "Reading and Viewing Modern China"
+        ],
+        [
+            "GCHN-SHU 164",
+            "The History of the Silk Road"
+        ],
+        [
+            "GCHN-SHU 265",
+            "Women in China: From May 4th to Me Too & Beyond"
+        ]
+    ],
+    "IPC": [
+        [
+            "GCHN-SHU 250",
+            "Geographies of China"
+        ],
+        [
+            "ECON-SHU 238",
+            "History of Modern Economic Growth: Exploring China From a Comparative Perspective"
+        ],
+        [
+            "GCHN-SHU 101",
+            "Introduction to Chinese Civilization"
+        ],
+        [
+            "SOCS-SHU 331",
+            "Politics in China"
+        ],
+        [
+            "SOCS-SHU 275",
+            "US-China Relations"
+        ]
+    ],
+    "Language": [
+        [
+            "CHIN-SHU 301",
+            "Advanced Chinese I"
+        ],
+        [
+            "CHIN-SHU 301A",
+            "Advanced Chinese I for Heritage Learners"
+        ],
+        [
+            "CHIN-SHU 302",
+            "Advanced Chinese II"
+        ],
+        [
+            "CHIN-SHU 430",
+            "Discovering Contemporary China Through Documentary Films"
+        ],
+        [
+            "EAP-SHU 101",
+            "English for Academic Purposes I"
+        ],
+        [
+            "EAP-SHU 101S",
+            "English for Academic Purposes II for FoS Students"
+        ],
+        [
+            "CHIN-SHU 211",
+            "Intermediate Chinese for Advanced Beginners"
+        ],
+        [
+            "CHIN-SHU 202",
+            "Intermediate Chinese II"
+        ],
+        [
+            "CHIN-SHU 202A",
+            "Intermediate Chinese II - Accelerated"
+        ],
+        [
+            "CHIN-SHU 404",
+            "Readings in contemporary Chinese Culture"
+        ]
+    ],
+    "Math": [
+        [
+            "MATH-SHU 9",
+            "Precalculus"
+        ]
+    ],
+    "STS": [
+        [
+            "SOCS-SHU 208",
+            "Cities at Crossroads: Environmental Challenges and Opportunities in Cities"
+        ],
+        [
+            "CENG-SHU 352",
+            "Emerging Technologies for Smart Cities"
+        ],
+        [
+            "SOCS-SHU 332",
+            "Global Mental Health"
+        ],
+        [
+            "SOCS-SHU 170",
+            "Introduction to Global Health"
+        ],
+        [
+            "NEUR-SHU 303",
+            "Introduction to Linguistics: The Science of Human Language"
+        ],
+        [
+            "SOCS-SHU 334",
+            "Legal Psychology"
+        ],
+        [
+            "HIST-SHU 239",
+            "New York: History of the City and its People"
+        ],
+        [
+            "PSYC-SHU 329",
+            "Parenting and Culture"
+        ],
+        [
+            "PHIL-SHU 91",
+            "Philosophy of Biology"
+        ],
+        [
+            "PHIL-SHU 130",
+            "Philosophy of Technology: Thinking Machines"
+        ],
+        [
+            "GCHN-SHU 216",
+            "Psychology and Modernity in China"
+        ],
+        [
+            "HUMN-SHU 110",
+            "What is Science and Technology Studies"
+        ],
+        [
+            "HIST-SHU 305",
+            "When Science Goes Wrong"
+        ]
+    ],
+    "SSPC": [
+        [
+            "SOCS-SHU 391",
+            "International Investment in Developing Countries: China and Africa"
+        ],
+        [
+            "SOCS-SHU 133",
+            "Urbanization in China"
+        ]
+    ]
+}
