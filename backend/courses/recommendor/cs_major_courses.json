@@ -1,0 +1,55 @@
+[
+    [
+        "CSCI-SHU 11 Introduction to Computer Programming",
+        "CSCI-UA 2 Introduction to Computer Programming"
+    ],
+    [
+        "MATH-SHU 131 Calculus",
+        "MATH-UA 101 Calculus"
+    ],
+    [
+        "CSCI-SHU 101 Introduction to Computer and Data Science",
+        "CSCI-UA 101 Intro to Computer Science"
+    ],
+    [
+        "MATH-SHU 235 Probability and Statistics",
+        "MATH-SHU 238 Honors Theory of Probability",
+        "BUSF-SHU 101 Statistics for Business and Economics",
+        "ECON-UA 18 Statistics",
+        "ECON-UA 20 Analytical Statistics",
+        "MA-UY 2224 Data Analysis",
+        "MATH-UA 233 Theory of Probability",
+        "MATH-UA 235 Probability and Statistic"
+    ],
+    [
+        "MA-UY 2314 Discrete Mathematics",
+        "CSCI-SHU 2314 Discrete Mathematics",
+        "MATH-UA 120 Discrete Mathematic"
+    ],
+    [
+        "CENG-SHU 202 Computer Architecture",
+        "CS-UY 2214 Computer Architecture and Organization",
+        "CSCI-UA 201 Computer Systems Organization",
+        "CSCI-SHU 350 Embedded Computer Systems"
+    ],
+    [
+        "CSCI-SHU 210 Data Structures",
+        "CS-UY 1134 Data Structures and Algorithms",
+        "CS-UY 2134 Data Structures and Algorithms",
+        "CSCI-UA 102 Data Structures"
+    ],
+    [
+        "CSCI-SHU 215 Operating Systems",
+        "CSCI-UA 202 Operating Systems",
+        "CS-UY 3224 Operating Systems"
+    ],
+    [
+        "CSCI-SHU 220 Algorithms",
+        "CS-UY 2413 Design & Analysis of Algorithms",
+        "CSCI-GA 1170 Fundamental Algorithms",
+        "CSCI-UA 310 Basic Algorithms"
+    ],
+    [
+        "CSCI-SHU 420 Computer Science Senior Project"
+    ]
+]

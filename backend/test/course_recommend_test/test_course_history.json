@@ -1,0 +1,130 @@
+{
+    "Spring 2022": [
+        [
+            "CSCI-SHU - 360",
+            "Machine Learning",
+            "4",
+            "A"
+        ],
+        [
+            "CENG-SHU - 202",
+            "Computer Architecture",
+            "4",
+            "A"
+        ],
+        [
+            "GCHN-SHU - 283",
+            "Reading&amp;Viewing Modern China",
+            "4",
+            "A"
+        ],
+        [
+            "DATS-SHU - 240",
+            "Optimization &amp; Math Program.",
+            "4",
+            "A"
+        ],
+        [
+            "CCEX-SHU - 214",
+            "How Things Work",
+            "4",
+            "A"
+        ]
+    ],
+    "Fall 2021": [
+        [
+            "CSCI-SHU - 210",
+            "Data Structures",
+            "4",
+            "A"
+        ],
+        [
+            "MATH-SHU - 151",
+            "Multivariable Calculus",
+            "4",
+            "A"
+        ],
+        [
+            "MATH-SHU - 235",
+            "Probability and Statistics",
+            "4",
+            "A"
+        ],
+        [
+            "CCCF-SHU - 101W28",
+            "PoH: Why Beauty?",
+            "4",
+            "B"
+        ],
+        [
+            "MUS-SHU - 152",
+            "Group Guqin, All Levels",
+            "2",
+            "A"
+        ]
+    ],
+    "Spring 2021": [
+        [
+            "CSCI-SHU - 101",
+            "Intro to Computer Science",
+            "4",
+            "A"
+        ],
+        [
+            "MATH-SHU - 140",
+            "Linear Algebra",
+            "4",
+            "A-"
+        ],
+        [
+            "WRIT-SHU - 101",
+            "Writing as Inquiry: WI",
+            "4",
+            "A-"
+        ],
+        [
+            "EAP-SHU - 101V",
+            "EAP: The Science of Friendship",
+            "4",
+            "A-"
+        ],
+        [
+            "MUS-SHU - 152",
+            "Group Guqin, All Levels",
+            "2",
+            "A"
+        ]
+    ],
+    "Fall 2020": [
+        [
+            "CSCI-SHU - 11",
+            "Intro to Computer Programming",
+            "4",
+            "A"
+        ],
+        [
+            "MATH-SHU - 131",
+            "Calculus",
+            "4",
+            "A"
+        ],
+        [
+            "CCSF-SHU - 101L",
+            "Global Perspectives on Society",
+            "4",
+            "B+"
+        ],
+        [
+            "ART-SHU - 239.2",
+            "Choreography &amp; Performance",
+            "2",
+            "A"
+        ],
+        [
+            "EAP-SHU - 100U",
+            "EAP: Money Stuff",
+            "4",
+            "A"
+        ]
+    ]
+}
