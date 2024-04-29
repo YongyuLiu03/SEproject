@@ -35,7 +35,7 @@ def parse_semester(semester, content):
                 cumu_info += 1
                 # course_grade = course_grade[:course_grade.find("<")]
 
-            semester_lst.append([course_num, course_name, course_credits, course_grade])
+            semester_lst.append([course_num, course_name, course_credits])
 
     return semester_lst
 

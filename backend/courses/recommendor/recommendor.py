@@ -298,7 +298,7 @@ class Recommendor():
                         for course in self.cs_major_courses[1]:
                             if 'UA' in course:
                                 recommend_courses.append(f'{course} | AT core')
-                                braek
+                                break
                     else:
                         # find in sh courses
                         for course in self.cs_major_courses[1]:
