@@ -22,6 +22,7 @@ const LoginForm = () => {
       // Save the token in local storage or state
       console.log(response);
       localStorage.setItem('token', response.data.token);
+      localStorage.setItem('coursesExist', response.data.courseExists);
       navigate('/taken-courses');
     //   navigate.push('/submit-courses'); // Redirect to course submission form
     } catch (error) {

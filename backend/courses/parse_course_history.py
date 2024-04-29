@@ -91,4 +91,4 @@ def parse_course_history(text):
 
         i += 1
 
-    return student_name, gpa, semester_dict
+    return semester_dict

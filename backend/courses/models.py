@@ -3,6 +3,75 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 
+
+class Major(models.Model):
+    name = models.CharField(max_length=255)
+    is_major = models.BooleanField(default=True)
+    
+    def __str__(self) -> str:
+        return f'{self.name} - {"major" if self.is_major else "core"}'
+    
+    def get_all_reqs(self):
+        major_requirements = self.requirement.all()
+        for req in major_requirements:
+            print(req)
+        return major_requirements
+
+class Course(models.Model):
+    course_id = models.TextField(primary_key=True, max_length=255)
+    credit = models.IntegerField(default=4)
+    description = models.TextField(max_length=255, blank=True)
+
+    def __str__(self) -> str:
+        return f'{self.course_id} ({self.credit})'
+    
+    def get_prereqs(self):
+        return self.prereqs.all()
+
+    def validate_student(self, student):
+        prereqs = self.get_prereqs()
+
+        for prereq_set in prereqs:
+            if not student.taken_courses.filter(course__in=prereq_set.prereqs.all()).exists():
+                print(prereq_set)
+                return False
+        return True 
+    
+    def get_fulfill_majors(self):
+        # return fulfill major/core
+        major_requirements = self.major_requirements.all()
+        majors = set()
+        for major_req in major_requirements:
+            majors.add(major_req.major)
+            print(f"{self.course_id} fulfills {major_req.major.name}, type: {"elective" if major_req.elective else "required"}")
+        return list(majors)
+
+class MajorRequirement(models.Model):
+    courses = models.ManyToManyField('Course', related_name='major_requirements')
+    major = models.ForeignKey('Major', related_name='requirement', on_delete=models.CASCADE)
+    elective = models.BooleanField(default=True)
+    count = models.IntegerField(default=1)
+    
+    def __str__(self) -> str:
+        courses_names = ', '.join(course.course_id for course in self.courses.all())
+        return f'{self.major.name} - choose {self.count} - from [{courses_names}]'
+
+
+class CoursePrereq(models.Model):
+    course = models.ForeignKey('Course', on_delete=models.CASCADE, related_name='prereqs')
+    prereqs = models.ManyToManyField('Course', related_name='required_by')
+
+    def __str__(self):
+        courses = ', '.join(course.name for course in self.prereqs.all())
+        return f"{self.course.name} requires one of [{courses}]"
+
+
+
+
+
+# Student related class
+
+
 class Student(models.Model):
     class Level(models.IntegerChoices):
         FR = 1, "Freshman"
@@ -10,84 +79,51 @@ class Student(models.Model):
         JR = 3, "Junior"
         SR = 4, "Senior"
     
-    
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    student_id = models.AutoField(primary_key=True)
-    # net_id = models.TextField(primary_key=True, max_length=10)
-    # name = models.TextField(max_length=50)
     level_id = models.SmallIntegerField(choices=Level.choices)
     major = models.ManyToManyField('Major', symmetrical=False, blank=True)
-    credit = models.SmallIntegerField()
+    credit = models.SmallIntegerField(default=0)
+
+    # course_dict = models.JSONField()
+    # rec_cores = models.ManyToManyField('Course', related_name='core', symmetrical=False, blank=True)
+    # rec_majors = models.ManyToManyField('Course', related_name='major', symmetrical=False, blank=True)
+
+    def query_taken_courses(self):
+        # return taken courses objects
+        pass
 
 
-class Course(models.Model):
-    course_id = models.TextField(primary_key=True, max_length=20)
-    name = models.TextField(max_length=50)
-    credit = models.IntegerField()
-    description = models.TextField(max_length=255, blank=True)
-    prereqs = models.ManyToManyField('Course', symmetrical=False, related_name='pre_req_of', blank=True)
-    times = models.ManyToManyField('Timeslot', related_name='courses', blank=True)
-    majors = models.ManyToManyField('Major', related_name="courses", blank=True)
-    at_fall = models.BooleanField(default=True)
-    at_spring = models.BooleanField(default=True)
+    def calc_taken_credit(self):
+        # update self.credit
+        pass
 
-    def __str__(self) -> str:
-        return f'{self.course_id} {self.name}'
+    def generate_rec(self):
+        def rec_core(self):
+            # update rec cores
+            pass
+            
+        def rec_major(self):
+            # update rec majors
+            pass
+        pass
+
+    def check_credit(self):
+        # return True if credit >= 128 after summing up self.credit and sum(rec courses credit)
+        pass
+
+    def check_fufill_core(self):
+        # return True if all core fulfilled 
+        pass
+
+    def check_fufill_major(self):
+        # return True if decided major fulfilled
+        pass
+
 
 class Student_taken_Course(models.Model):
-    student_id = models.ForeignKey('Student', on_delete=models.CASCADE)
-    course_id = models.ForeignKey('Course', on_delete=models.CASCADE)
+    student = models.ForeignKey('Student', related_name='taken_courses', on_delete=models.CASCADE)
+    course = models.ForeignKey('Course', related_name='course', on_delete=models.CASCADE)
     semester = models.TextField(max_length=20)
-    # grade = models.TextField(max_length=2, blank=True)
-
-class Major(models.Model):
-    major_id = models.AutoField(primary_key=True)
-    name = models.TextField()
-    is_major = models.BooleanField(default=True)
-    
-    def __str__(self) -> str:
-        return self.name
-
-class Timeslot(models.Model):
-    class Day(models.IntegerChoices):
-        MON = 1, "Monday"
-        TUE = 2, "Tuesday"
-        WED = 3, "Wednesday"
-        THU = 4, "Thursday"
-        FRI = 5, "Friday"
-        SAT = 6, "Saturday"
-        SUN = 7, "Sunday"
-
-    timeslot_id = models.AutoField(primary_key=True)
-    day_of_week = models.PositiveSmallIntegerField(choices=Day.choices)
-    begin_time = models.TimeField(auto_now_add=True)
-    end_time = models.TimeField(auto_now_add=True)
 
 
-
-#     def query_name(self):
-#         return self.course_number_and_name
-
-#     def query_major(self):
-#         return self.majors
-    
-#     @staticmethod
-#     def filter_by_time_slot(day, start_time, end_time):
-#         return Course.objects.filter(
-#             times__day_of_week=day, 
-#             times__start_time__gte=start_time, 
-#             times__end_time__lte=end_time
-#         ).distinct()
-
-# class TakenCourse(Course):
-#     semester = models.CharField(max_length=20)
-#     grade = models.CharField(max_length=2)
-#     users = models.ManyToManyField(User, through='UserCourse', related_name='taken_courses')
-    
-#     def query_grade(self):
-#         return self.grade
-
-#     def query_semester(self):
-#         return self.semester
-    
 

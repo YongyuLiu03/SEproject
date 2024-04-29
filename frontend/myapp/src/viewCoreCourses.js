@@ -1,50 +1,42 @@
-import React, { useState, useEffect, Component } from 'react';
+import React, { useState, useEffect } from 'react';
 import axiosInstance from './axiosInstance';
-import TempInfo from './tempInfo';
 
-const TakenCourses = () => {
+
+const ViewCoreCourses = () => {
   const [htmlInput, setHtmlInput] = useState('');
   const [courses, setCourses] = useState({});
   // const [update, setUpdate] = useState(false);
 
   useEffect(() => {
-    const getCourseDict = async () => {
-      if (localStorage.getItem('coursesExist') === 'true') {
+    const getCoreDict = async () => {
         try {
-          const response = await axiosInstance.get('courses/');
+          const response = await axiosInstance.get('core-courses/');
           setCourses(response.data);
           // setUpdate(true);
           console.log(response.data);
         } catch (error) {
           console.error("Failed to retrieve course data:", error);
         }
-      }
     };
     
-    getCourseDict();
+    getCoreDict();
   }, []);
   
     
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axiosInstance.post('courses/', { html: htmlInput});
+      const response = await axiosInstance.post('courses/', { html: htmlInput, hideGrade: hideGrade });
       setCourses(response.data);
     } catch (error) {
       console.error("Error fetching data: ", error);
     }
   };
 
-
-
-
-
   return (
-    <>
-    <div className="TakenCourses">
+    <div className="App">
       <form onSubmit={handleSubmit}>
         <textarea value={htmlInput} onChange={(e) => setHtmlInput(e.target.value)} />
-        {/* <input type='checkbox' value='hide_grade' checked={hideGrade} onChange={() => sethideGrade(!hideGrade)} />hide grade */}
         <button type="submit">Submit</button>
       </form>
       <div>
@@ -60,11 +52,12 @@ const TakenCourses = () => {
                 </tr>
               </thead>
               <tbody>
-                {courseList.map(([number, name, credit], index) => (
+                {courseList.map(([number, name, credit, grade], index) => (
                   <tr key={index}>
                     <td>{number}</td>
                     <td>{name}</td>
                     <td>{credit}</td>
+                    {!hideGrade && <td>{grade}</td>}
                   </tr>
                 ))}
               </tbody>
@@ -73,14 +66,7 @@ const TakenCourses = () => {
         ))}
       </div>
     </div>
-
-
-    <div>
-      <Component TempInfo />
-    </div>
-    
-    </>
   );
 }
 
-export default TakenCourses;
+export default ViewCoreCourses;

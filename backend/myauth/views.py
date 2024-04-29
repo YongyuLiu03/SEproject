@@ -16,7 +16,7 @@ class LoginAPIView(APIView):
         user = authenticate(username=username, password=password)
         if user:
             token, created = Token.objects.get_or_create(user=user)
-            return Response({'token': token.key})
+            return Response({'token': token.key, "coursesExist": True if user.student else False})
         return Response({'error': 'Invalid Credentials'}, status=400)
     
 
