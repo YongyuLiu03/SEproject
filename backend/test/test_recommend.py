@@ -3,8 +3,8 @@ import json
 from ..courses.recommendor.recommendor import Recommendor
 
 
-def recommend(course_history):
-    recommendor = Recommendor(course_history, identity='chinese', tense=False)
+def recommend(course_history, tense=False):
+    recommendor = Recommendor(course_history, identity='chinese', tense=tense)
     
     graduate_valid, recommend_courses = recommendor.recommend()
 
@@ -19,13 +19,13 @@ if __name__ == "__main__":
     with open('backend/test/course_recommend_test/test_course_history.json', 'r') as json_file:
         course_history = json.load(json_file)
     print('+++++++++++++++++Test Case1+++++++++++++++++')
-    recommend(course_history)
+    recommend(course_history, tense=True)
     print('\n\n')
     
     # test case 2: empty course history
     course_history = {}
     print('+++++++++++++++++Test Case2+++++++++++++++++')
-    recommend(course_history)
+    recommend(course_history, tense=False)
     print('\n\n')
 
     # test case 3: bf major that cannot transfer to cs

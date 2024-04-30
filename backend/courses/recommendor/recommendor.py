@@ -162,7 +162,7 @@ class Recommendor():
         self.major_course_list = [0, 1, 2, 3, 4, 5, 6, 7, 8]
 
         # whether open the JuanWang mode
-        self.tense = True
+        self.tense = tense
 
         # stores the indices of the self.cs_major_courses
         """
