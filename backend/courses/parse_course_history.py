@@ -45,7 +45,7 @@ def parse_course_history(text):
 
     # invalid input
     if len(lst) < 5:
-        return None
+        return {}
 
     # find the name
     rough_location = text.find('class="IS_BB_LINKS_MENU_DESKTOP"')

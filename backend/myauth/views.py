@@ -16,8 +16,9 @@ class LoginAPIView(APIView):
         user = authenticate(username=username, password=password)
         if user:
             token, created = Token.objects.get_or_create(user=user)
-            return Response({'token': token.key, "coursesExist": True if user.student else False})
-        return Response({'error': 'Invalid Credentials'}, status=400)
+            has_student = hasattr(user, 'student')
+            return Response({'token': token.key, "coursesExist": has_student})
+        return Response({'error': 'Invalid Credentials'}, status=status.HTTP_401_UNAUTHORIZED)
     
 
 class SignupAPIView(APIView):

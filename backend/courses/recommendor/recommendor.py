@@ -156,7 +156,7 @@ class Recommendor():
         self.semesters = ['freshmen_1st', 'freshmen_2nd', 'sophomore_1st', 'sophomore_2nd', 'junior_1st', 'junior_2nd', 'senior_1st', 'senior_2nd']
         self.course_history = course_history
 
-        with open('backend/courses/recommendor/cs_major_courses.json', 'r') as json_file:
+        with open('courses/recommendor/cs_major_courses.json', 'r') as json_file:
             self.cs_major_courses = json.load(json_file)
 
         self.major_course_list = [0, 1, 2, 3, 4, 5, 6, 7, 8]
@@ -224,19 +224,19 @@ class Recommendor():
 
     def recommend(self):
         # load the ny core courses
-        with open('backend/courses/recommendor/ny_core_courses.json', 'r') as json_file:
+        with open('courses/recommendor/ny_core_courses.json', 'r') as json_file:
             ny_core_courses = json.load(json_file)
     
         # load the ny elective courses
-        with open('backend/courses/recommendor/ny_elective_courses.json', 'r') as json_file:
+        with open('courses/recommendor/ny_elective_courses.json', 'r') as json_file:
             ny_elective_courses = json.load(json_file)
 
         # load the sh elective courses
-        with open('backend/courses/recommendor/sh_elective_courses.json', 'r') as json_file:
+        with open('courses/recommendor/sh_elective_courses.json', 'r') as json_file:
             sh_elective_courses = json.load(json_file)
 
         # load sh core courses
-        with open('backend/courses/recommendor/sh_core_courses.json', 'r') as json_file:
+        with open('courses/recommendor/sh_core_courses.json', 'r') as json_file:
             sh_core_courses = json.load(json_file)
 
         # prepare the untaken core courses and taken electives
@@ -276,7 +276,7 @@ class Recommendor():
                         for course in self.cs_major_courses[1]:
                             if 'UA' in course:
                                 recommend_courses.append(f'{course} | Math core')
-                                braek
+                                break
                     else:
                         # find in sh courses
                         for course in self.cs_major_courses[1]:

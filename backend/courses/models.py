@@ -18,6 +18,7 @@ class Major(models.Model):
             print(req)
         return major_requirements
 
+
 class Course(models.Model):
     id = models.TextField(primary_key=True, max_length=255)
     name = models.TextField(max_length=255)
@@ -40,13 +41,8 @@ class Course(models.Model):
         return True 
     
     def get_fulfill_majors(self):
-        # return fulfill major/core
-        major_requirements = self.major_requirements.all()
-        majors = set()
-        for major_req in major_requirements:
-            majors.add(major_req.major)
-            print(f"{self.id} - {self.name} fulfills {major_req.major.name}, type: {"elective" if major_req.elective else "required"}")
-        return list(majors)
+        return [req.major for req in self.major_requirements.all()]
+
 
 class MajorRequirement(models.Model):
     courses = models.ManyToManyField('Course', related_name='major_requirements')
@@ -91,10 +87,15 @@ class Student(models.Model):
         SR2 = 8, "senior_2nd"
     
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    level_id = models.SmallIntegerField(choices=Level.choices)
+    level_id = models.SmallIntegerField(choices=Level.choices, default=0)
     major = models.ManyToManyField('Major', symmetrical=False, blank=True)
     credit = models.SmallIntegerField(default=0)
-    course_dict = models.JSONField()
+    course_dict = models.JSONField(default=dict)
+
+    def __str__(self) -> str:
+        major_str = ", ".join(m.name for m in self.major.all())
+        return f"{self.user.username}, major: {major_str}, level: {self.get_level_id_display()}"
+
 
     def add_taken_courses(self):
         for semester in self.course_dict:
@@ -108,12 +109,15 @@ class Student(models.Model):
                 if created: print("Added new course from client submission")
                 student_taken_course, created = StudentTakenCourse.objects.get_or_create(student=self, course=course, defaults={'semester': semester})
 
+
     def calc_taken_credit(self):
-        self.credit = self.taken_courses.aggregate(total_credits=Sum('course__credit'))['total_credits']
-        print(self.credit)
+        if self.taken_courses.all():
+            self.credit = self.taken_courses.aggregate(total_credits=Sum('course__credit'))['total_credits']
+        else:
+            self.credit = 0 
 
 
-        
+
 
     # rec_cores = models.ManyToManyField('Course', related_name='core', symmetrical=False, blank=True)
     # rec_majors = models.ManyToManyField('Course', related_name='major', symmetrical=False, blank=True)

@@ -8,26 +8,25 @@ class StudentSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Student
-        fields = ['student_id', 'user', 'level_id', 'credit']
-        read_only_fields = ('user',)
+        fields = '__all__'
 
-    def create(self, validated_data):
-        user = self.context['request'].user
-        student = Student.objects.create(user=user, **validated_data)
-        return student
-    
 
 class CourseSerializer(serializers.ModelSerializer):
     class Meta:
         model = Course
-        fields = ['course_id', 'name', 'credit', 'description', 'at_fall', 'at_spring']
+        fields = '__all__' 
+    #     fields = ['course_id', 'name', 'credit', 'description', 'at_fall', 'at_spring']
 
-    def create(self, validated_data):
-        course_id = validated_data.get('course_id')
-        course, created = Course.objects.get_or_create(course_id=course_id, defaults=validated_data)
-        if not created:
-            for attr, value in validated_data.items():
-                setattr(course, attr, value)
-            course.save()
-        return course
-    
+    # def create(self, validated_data):
+    #     course_id = validated_data.get('course_id')
+    #     course, created = Course.objects.get_or_create(course_id=course_id, defaults=validated_data)
+    #     if not created:
+    #         for attr, value in validated_data.items():
+    #             setattr(course, attr, value)
+    #         course.save()
+    #     return course
+
+class MajorSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Major
+        fields = '__all__'
