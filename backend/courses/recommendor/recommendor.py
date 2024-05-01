@@ -47,14 +47,14 @@ class RecommendorPreparer():
         }
 
         # 1 ED, 1STS, No Math (Assume we all place in to Calculus), 1AT, (IPC + HPC + SSPC) = 2
-        taken_map = {'ED': 0, 'STS': 0, 'Math': 1, 'AT': 0, 'IPC': 0, 'HPC': 0, 'SSPC': 0}
+        taken_map = {'ED': 0, 'STS': 0, 'MATH': 0, 'AT': 0, 'IPC': 0, 'HPC': 0, 'SSPC': 0}
 
         total_credits = 0
         for _, taken_courses in course_history.items():
             for taken_course in taken_courses:
-                if 'math' in taken_course[0].lower() and taken_map['Math'] == 0:
+                if 'math' in taken_course[0].lower() and taken_map['MATH'] == 0:
                     total_credits += 4
-                    taken_map['Math'] = 1
+                    taken_map['MATH'] = 1
                     continue
                 # check if the taken course in the required courses
                 # do not use the course name to search because the course name may be different
@@ -63,7 +63,7 @@ class RecommendorPreparer():
 
         untaken_core_courses = []
 
-        core_part1 = ['ED', 'STS', 'AT', 'Math']
+        core_part1 = ['ED', 'STS', 'AT', 'MATH']
         core_part2 = ['IPC', 'HPC', 'SSPC']
         for core in core_part1:
             if taken_map[core] == 0:
@@ -160,6 +160,7 @@ class Recommendor():
             self.cs_major_courses = json.load(json_file)
 
         self.major_course_list = [0, 1, 2, 3, 4, 5, 6, 7, 8]
+        self.major_course_pre_reqs = {0: [], 1: [], 2: [0], 3: [1], 4: [1], 5: [2], 6: [2], 7: [5], 8: [6, 4]}
 
         # whether open the JuanWang mode
         self.tense = tense
@@ -175,6 +176,9 @@ class Recommendor():
         self.untaken_major_courses = self._init_recommend()
 
     def clean_course_number(self, course_number):
+        if course_number.count('-') == 1:
+            return course_number
+
         # clean the course number
         course_num_idx = course_number.find('-')
         course_num_idx = course_number[course_num_idx+1:].find('-') + course_num_idx
@@ -265,12 +269,18 @@ class Recommendor():
 
             # we simply recommend half of the courses be the core courses
             # half of the courses be the major courses
-            core_recommend_limit = (4 - len(recommend_courses)) / 2
+            core_recommend_limit = int((4 - len(recommend_courses)) / 2)
             core_recommend_count = 0
+
+            # special care for the case that we didn't take the Math and AT
+            if 'MATH' in self.untaken_core_courses and 'AT' in self.untaken_core_courses:
+                if core_recommend_limit == 1 and len(recommend_courses) + core_recommend_limit <= 4:
+                    core_recommend_limit = 2
+
             # recommend the core courses
             if len(self.untaken_core_courses) > 0:
                 # top core pirority: Math: Calculus and AT: ICP
-                if 'MATH' in self.untaken_core_courses and recommend_courses < 4:
+                if 'MATH' in self.untaken_core_courses and core_recommend_count < core_recommend_limit:
                     if ny:
                         # find in ny courses
                         for course in self.cs_major_courses[1]:
@@ -285,7 +295,7 @@ class Recommendor():
                                 break
                     
                     # update the untakne core courses
-                    self.untaken_core_courses.remove('Math')
+                    self.untaken_core_courses.remove('MATH')
 
                     core_recommend_count += 1
 
@@ -332,13 +342,27 @@ class Recommendor():
 
             # recommend the major courses
             # we do this by a greedy way by giving the major course the proper indices
-            if len(self.untaken_major_courses) > 0:
+            if len(self.untaken_major_courses) > 0 and len(recommend_courses) < 4:
+                current_semester_majors = []
                 # we simply recommend half of the courses be the major courses
-                major_recommend_num = min(len(recommend_courses), len(self.untaken_major_courses))
+                major_recommend_num = min(4 - len(recommend_courses), len(self.untaken_major_courses))
 
                 for i in range(major_recommend_num):
                     # extract the major idx and update the self.untaken_major_courses
-                    major_type_idx = self.untaken_major_courses.pop(0)
+                    major_type_idx = self.untaken_major_courses[0]
+
+                    # check the major requirement
+                    valid = True
+                    for i in self.major_course_pre_reqs[major_type_idx]:
+                        if i in self.untaken_major_courses or i in current_semester_majors:
+                            valid = False
+
+                    if not valid:
+                        break
+
+                    # update the untakne major courses only when this type is valid
+                    self.untaken_major_courses.pop(0)
+                    current_semester_majors.append(major_type_idx)
 
                     # randomly choose the course to add diversity
                     if ny:
@@ -354,7 +378,6 @@ class Recommendor():
                                 recommend_courses.append(courses)
                                 break
 
-            # Todo: Add a tense type that you take as much as possible the elective courses
             # recommend the electives
             if len(recommend_courses) < 4 and len(self.taken_electives) < 5:
                 for i in range(4 - len(recommend_courses)):
@@ -421,6 +444,9 @@ class Recommendor():
                     recommend_courses.append('Your Choice')
 
             recommend[rest_semester] = recommend_courses
+
+            # update the course_history
+            self.course_history[rest_semester] = recommend_courses
 
         # after recommendation, if there are still left untaken core/major courses, the taken electives are not 4
         # this is not the regular cases and we recommend the user to arange by themselves
