@@ -51,7 +51,8 @@ class MajorRequirement(models.Model):
     count = models.IntegerField(default=1)
     
     def __str__(self) -> str:
-        courses_names = " from " + ', '.join(str(course) for course in self.courses.all()) if self.major.is_major and not self.elective else ""
+        courses_names = " from " + ', '.join(str(course) for course in self.courses.all()) \
+             if self.major.is_major and not self.elective else ""
         return f'{self.major.name} - choose {self.count}{courses_names}'
 
 
@@ -62,8 +63,6 @@ class CoursePrereq(models.Model):
     def __str__(self):
         courses = ', '.join(str(course) for course in self.prereqs.all())
         return f"{self.course} requires one of [{courses}]"
-
-
 
 
 # Student related classes
@@ -95,29 +94,33 @@ class Student(models.Model):
     def __str__(self) -> str:
         major_str = ", ".join(m.name for m in self.major.all())
         return f"{self.user.username}, major: {major_str}, level: {self.get_level_id_display()}"
-
-
-    def add_taken_courses(self):
-        for semester in self.course_dict:
-            for course_list in self.course_dict[semester]:
-                id, name, credit = course_list
-                id = id.strip()
-                name = name.strip()
-                credit = int(credit)
+    
+    def sync_courses(self):
+        current_courses = {(tc.course.id, tc.semester): tc for tc in self.taken_courses.all()}
+        for semester, courses in self.course_dict.items():
+            for course_data in courses:
+                course_id, course_name, course_credit = course_data
+                course_key = (course_id.strip(), semester)
                 course, created = Course.objects.get_or_create(
-                    id=id, defaults={'name': name, 'credit': credit, 'description': "Added from submitted histories"})
+                    id=course_id, defaults={'name': course_name, 'credit': course_credit, 'description': "Added from submitted histories"}
+                )
                 if created: print("Added new course from client submission")
-                student_taken_course, created = StudentTakenCourse.objects.get_or_create(student=self, course=course, defaults={'semester': semester})
-
-
+                if course_key in current_courses:
+                    del current_courses[course_key]
+                else:
+                    StudentTakenCourse.objects.create(student=self, course=course, semester=semester)
+        for tc in current_courses.values():
+            tc.delete()
+        self.calc_taken_credit()
+        self.level_id = len(self.course_dict)
+        
     def calc_taken_credit(self):
-        if self.taken_courses.all():
-            self.credit = self.taken_courses.aggregate(total_credits=Sum('course__credit'))['total_credits']
-        else:
-            self.credit = 0 
+        self.credit = self.taken_courses.aggregate(total_credits=Sum('course__credit'))['total_credits'] or 0
 
-
-
+    # def save(self, *args, **kwargs):
+    #     print(f"Saving {self.user.username}")
+    #     self.sync_courses()
+    #     super().save(*args, **kwargs)
 
     # rec_cores = models.ManyToManyField('Course', related_name='core', symmetrical=False, blank=True)
     # rec_majors = models.ManyToManyField('Course', related_name='major', symmetrical=False, blank=True)

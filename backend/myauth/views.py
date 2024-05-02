@@ -36,7 +36,7 @@ class LogoutAPIView(APIView):
     authentication_classes = [TokenAuthentication]
     permission_classes = [IsAuthenticated]
 
-    def post(self, request):
+    def get(self, request):
         request.user.auth_token.delete() 
         return Response(status=status.HTTP_204_NO_CONTENT)
 

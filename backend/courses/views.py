@@ -1,5 +1,5 @@
 from .models import Student, StudentTakenCourse, Major, Course
-from .serializers import StudentSerializer, CourseSerializer, MajorSerializer
+from .serializers import StudentSerializer, CourseSerializer, MajorSerializer, PrereqSerializer
 from rest_framework import permissions, status
 from rest_framework.views import APIView
 from rest_framework.exceptions import ValidationError
@@ -14,6 +14,7 @@ import json
 
 class ParseCourseDictAPIView(APIView):
     permission_classes = [permissions.IsAuthenticated]
+    cs = Major.objects.filter(name__iexact="cs").first()
 
     def get(self, request):
         try:
@@ -26,28 +27,27 @@ class ParseCourseDictAPIView(APIView):
 
     def post(self, request, *args, **kwargs):
         update_course = request.data.get("updateCourse")
-        course_dict = parse_course_history(request.data.get('courses', ''))
-        cs = Major.objects.filter(name__iexact="cs").first()
+        course_dict = request.data.get('course_dict', '')
+        parse_course = request.data.get('parseCourse', '')
+        print(course_dict)
+        print(parse_course)
+        if parse_course: course_dict = parse_course_history(course_dict)
         student, created = Student.objects.get_or_create(user=request.user)
         if created:
-            student.major.add(cs)
+            student.major.add(self.cs)
             student.course_dict = course_dict
             student.level_id = len(course_dict)
         if update_course:
             student.course_dict = course_dict
             student.level_id = len(course_dict)
-            student.save()
-
-        student.add_taken_courses()
-        student.calc_taken_credit()
-
+        student.save()
         student_serializr = StudentSerializer(student)
         return Response({'student': student_serializr.data})
 
 
 class RecommendCourseAPIView(APIView):
     permission_classes = [permissions.IsAuthenticated]
-    
+
     def get(self, request):
         try:
             course_dict = request.user.student.course_dict
@@ -59,12 +59,9 @@ class RecommendCourseAPIView(APIView):
                 return Response({'valid': valid, 'recommend_courses': recommend_courses})
             else:
                 return Response("Missing 'identity' or 'intense' parameter", status=status.HTTP_400_BAD_REQUEST)
-        
         except ObjectDoesNotExist:
             print("student or course_dict does not exist")
             return Response("student or course_dict does not exist", status=status.HTTP_404_NOT_FOUND)
-
-
 
 
 class CourseDetailAPIView(APIView):
@@ -76,7 +73,7 @@ class CourseDetailAPIView(APIView):
             prereqs = course.get_prereqs()
             majors = course.get_fulfill_majors()
             course_serializer = CourseSerializer(course)
-            prereq_serializer = CourseSerializer(prereqs, many=True)
+            prereq_serializer = PrereqSerializer(prereqs, many=True)
             major_serializer = MajorSerializer(majors, many=True)
             response_data = {
                 'course': course_serializer.data,
@@ -96,7 +93,7 @@ class MajorDetailAPIView(APIView):
             print(name)
             major = Major.objects.filter(name__iexact=name).first()
             requirements = major.get_all_reqs()
-            courses_list = [(CourseSerializer(req.courses.all(), many=True).data, req.count) for req in requirements]
+            courses_list = [( req.count, "Elective" if req.elective else "Required", CourseSerializer(req.courses.all(), many=True).data) for req in requirements]
             return Response({"requirements": courses_list})
         except Major.DoesNotExist:
             return Response({"error": "Major not found"}, status=status.HTTP_404_NOT_FOUND)
