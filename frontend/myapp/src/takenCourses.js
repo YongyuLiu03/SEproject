@@ -1,11 +1,10 @@
 import React, { useState, useEffect, Component } from 'react';
 import axiosInstance from './axiosInstance';
-import TempInfo from './tempInfo';
 
 const TakenCourses = () => {
   const [htmlInput, setHtmlInput] = useState('');
   const [courses, setCourses] = useState({});
-  // const [update, setUpdate] = useState(false);
+  const [update, setUpdate] = useState(false);
 
   useEffect(() => {
     const getCourseDict = async () => {
@@ -28,7 +27,7 @@ const TakenCourses = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axiosInstance.post('courses/', { html: htmlInput});
+      const response = await axiosInstance.post('taken-courses', { courses: htmlInput});
       setCourses(response.data);
     } catch (error) {
       console.error("Error fetching data: ", error);
@@ -40,7 +39,7 @@ const TakenCourses = () => {
 
 
   return (
-    <>
+
     <div className="TakenCourses">
       <form onSubmit={handleSubmit}>
         <textarea value={htmlInput} onChange={(e) => setHtmlInput(e.target.value)} />
@@ -74,12 +73,6 @@ const TakenCourses = () => {
       </div>
     </div>
 
-
-    <div>
-      <Component TempInfo />
-    </div>
-    
-    </>
   );
 }
 

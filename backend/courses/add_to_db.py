@@ -118,32 +118,32 @@ for core_name, course_list in course_lists.items():
 
 """
 
-# build course preqre
+# # build course preqre
 
-with open("./recommendor/sh_elective_courses.json") as f:
-    course_lists = json.load(f)
-pprint(course_lists)
+# with open("./recommendor/sh_elective_courses.json") as f:
+#     course_lists = json.load(f)
+# pprint(course_lists)
 
-for course_list in course_lists:   
-    id, name, prereq_lists, credit = course_list 
-    id = id.strip()
-    name = name.strip() 
-    course, created = Course.objects.get_or_create(id=id)
-    existed_prereqs = list(CoursePrereq.objects.filter(course=course).values_list('prereqs__id', flat=True))
-    # print(existed_prereqs)
+# for course_list in course_lists:   
+#     id, name, prereq_lists, credit = course_list 
+#     id = id.strip()
+#     name = name.strip() 
+#     course, created = Course.objects.get_or_create(id=id)
+#     existed_prereqs = list(CoursePrereq.objects.filter(course=course).values_list('prereqs__id', flat=True))
+#     # print(existed_prereqs)
 
-    for prereq_list in prereq_lists:
-        prereq_list_object = []
-        prereq_list = prereq_list.split(" OR ")
-        for prereq in prereq_list:
-            prereq = prereq.split(" ")
-            prereq_id = " ".join(prereq[:2]).strip()
-            prereq_name = " ".join(prereq[2:]).strip()
-            prereq_course, created = Course.objects.get_or_create(id=prereq_id, defaults={'name':prereq_name})
-            prereq_list_object.append(prereq_course)
-        if not CoursePrereq.objects.filter(prereqs__in=prereq_list_object, course=course).exists():
-            print("adding new")
-            print(prereq_list_object)
-            course_prereq = CoursePrereq.objects.create(course=course)
-            course_prereq.prereqs.add(*prereq_list_object)
+#     for prereq_list in prereq_lists:
+#         prereq_list_object = []
+#         prereq_list = prereq_list.split(" OR ")
+#         for prereq in prereq_list:
+#             prereq = prereq.split(" ")
+#             prereq_id = " ".join(prereq[:2]).strip()
+#             prereq_name = " ".join(prereq[2:]).strip()
+#             prereq_course, created = Course.objects.get_or_create(id=prereq_id, defaults={'name':prereq_name})
+#             prereq_list_object.append(prereq_course)
+#         if not CoursePrereq.objects.filter(prereqs__in=prereq_list_object, course=course).exists():
+#             print("adding new")
+#             print(prereq_list_object)
+#             course_prereq = CoursePrereq.objects.create(course=course)
+#             course_prereq.prereqs.add(*prereq_list_object)
 

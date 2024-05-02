@@ -23,7 +23,8 @@ class ParseCourseDictAPIView(APIView):
             student_serializr = StudentSerializer(student)
             return Response({'student': student_serializr.data})
         except ObjectDoesNotExist:
-            return Response("student does not exist, shouldn't get", status=status.HTTP_404_NOT_FOUND)
+            return Response("student does not exist, shouldn't get", 
+                            status=status.HTTP_404_NOT_FOUND)
 
     def post(self, request, *args, **kwargs):
         update_course = request.data.get("updateCourse")
@@ -58,10 +59,12 @@ class RecommendCourseAPIView(APIView):
                 valid, recommend_courses = recommendor.recommend()
                 return Response({'valid': valid, 'recommend_courses': recommend_courses})
             else:
-                return Response("Missing 'identity' or 'intense' parameter", status=status.HTTP_400_BAD_REQUEST)
+                return Response("Missing 'identity' or 'intense' parameter",
+                                 status=status.HTTP_400_BAD_REQUEST)
         except ObjectDoesNotExist:
             print("student or course_dict does not exist")
-            return Response("student or course_dict does not exist", status=status.HTTP_404_NOT_FOUND)
+            return Response("student or course_dict does not exist",
+                             status=status.HTTP_404_NOT_FOUND)
 
 
 class CourseDetailAPIView(APIView):

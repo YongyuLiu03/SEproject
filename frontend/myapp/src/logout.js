@@ -8,20 +8,19 @@ const Logout = () => {
     return localStorage.getItem('token') !== null;
   };
 
-  
   const handleLogout = () => {
     localStorage.removeItem('token');
     navigate('/login'); 
-    // You might also want to make a logout API call to invalidate the token server-side
   };
   
   return (
     isLoggedIn() ? (
       <div>
-        {/* You can style this as you prefer */}
         <button onClick={handleLogout}>Log Out</button>
       </div>
-    ) : null
+    ) : (<div>
+      You are not logged in. Why are you here?
+    </div>)
   );
 };
 
