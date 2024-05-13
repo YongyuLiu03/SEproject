@@ -11,9 +11,11 @@ class Major(models.Model):
     is_major = models.BooleanField(default=True)
     
     def __str__(self) -> str:
+        """Return string representation of the major."""   
         return f'{self.name} - {"major" if self.is_major else "core"}'
     
     def get_all_reqs(self):
+        """Get all requirements associated with the major."""
         major_requirements = self.requirement.all()
         for req in major_requirements:
             print(req)
@@ -28,12 +30,15 @@ class Course(models.Model):
     description = models.TextField(max_length=255, blank=True)
 
     def __str__(self) -> str:
+        """Return string representation of the course."""
         return f'{self.id} - {self.name}'
     
     def get_prereqs(self):
+        """Get prerequisites of the course."""
         return self.prereqs.all()
 
     def validate_student(self, student):
+        """Validate if a student has completed prerequisites for the course."""
         prereqs = self.get_prereqs()
 
         for prereq_set in prereqs:
@@ -43,6 +48,7 @@ class Course(models.Model):
         return True 
     
     def get_fulfill_majors(self):
+        """Get majors for which the course fulfills requirements."""
         return [req.major for req in self.major_requirements.all()]
 
 
@@ -54,6 +60,7 @@ class MajorRequirement(models.Model):
     count = models.IntegerField(default=1)
     
     def __str__(self) -> str:
+        """Return string representation of the major requirement."""
         courses_names = " from " + ', '.join(str(course) for course in self.courses.all()) \
              if self.major.is_major and not self.elective else ""
         return f'{self.major.name} - choose {self.count}{courses_names}'
@@ -65,6 +72,7 @@ class CoursePrereq(models.Model):
     prereqs = models.ManyToManyField('Course', related_name='required_by')
 
     def __str__(self):
+        """Return string representation of the course prerequisite."""
         courses = ', '.join(str(course) for course in self.prereqs.all())
         return f"{self.course} requires one of [{courses}]"
 
@@ -98,10 +106,12 @@ class Student(models.Model):
     course_dict = models.JSONField(default=dict)
 
     def __str__(self) -> str:
+        """Return string representation of the student."""
         major_str = ", ".join(m.name for m in self.major.all())
         return f"{self.user.username}, major: {major_str}, level: {self.get_level_id_display()}"
     
     def sync_courses(self):
+        """Synchronize courses taken by the student."""
         current_courses = {(tc.course.id, tc.semester): tc for tc in self.taken_courses.all()}
         for semester, courses in self.course_dict.items():
             for course_data in courses:
@@ -121,6 +131,7 @@ class Student(models.Model):
         self.level_id = len(self.course_dict)
         
     def calc_taken_credit(self):
+        """Calculate total credits taken by the student."""
         self.credit = self.taken_courses.aggregate(total_credits=Sum('course__credit'))['total_credits'] or 0
 
 
