@@ -1,5 +1,3 @@
-import pdb
-
 def parse_semester(semester, content):
     semester_lst = []
 
@@ -21,8 +19,6 @@ def parse_semester(semester, content):
                 cumu_info += 1
                 # course_name = course_name[:course_name.find("<")]
             
-            # if course_name == 'The Science of Happiness':
-            #     pdb.set_trace()
             # get the credits
             if 'Credits' in content[line+4-(2-cumu_info)]:
                 course_credits = content[line+4-(2-cumu_info)][75+len(semester)-1:-5]
