@@ -40,7 +40,7 @@ const Navbar = () => {
           </>
         ) : (
           <>
-            <h1> Yor are not logged in</h1>
+            <li> Yor are not logged in</li>
             <li>
               <Link to="/login">Login</Link>
             </li>

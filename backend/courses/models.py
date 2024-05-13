@@ -123,38 +123,4 @@ class Student(models.Model):
     def calc_taken_credit(self):
         self.credit = self.taken_courses.aggregate(total_credits=Sum('course__credit'))['total_credits'] or 0
 
-    # def save(self, *args, **kwargs):
-    #     print(f"Saving {self.user.username}")
-    #     self.sync_courses()
-    #     super().save(*args, **kwargs)
-
-    # rec_cores = models.ManyToManyField('Course', related_name='core', symmetrical=False, blank=True)
-    # rec_majors = models.ManyToManyField('Course', related_name='major', symmetrical=False, blank=True)
-
-    def query_taken_courses(self):
-        # return taken courses objects
-        pass
-
-    def generate_rec(self):
-        def rec_core(self):
-            # update rec cores
-            pass
-            
-        def rec_major(self):
-            # update rec majors
-            pass
-        pass
-
-    def check_credit(self):
-        # return True if credit >= 128 after summing up self.credit and sum(rec courses credit)
-        pass
-
-    def check_fufill_core(self):
-        # return True if all core fulfilled 
-        pass
-
-    def check_fufill_major(self):
-        # return True if decided major fulfilled
-        pass
-
 

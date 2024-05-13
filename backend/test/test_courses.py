@@ -1,7 +1,7 @@
 from django.contrib.auth.models import User
 from rest_framework.test import APIClient, APITestCase
 from rest_framework import status
-from courses.models import Course, Student, Student_taken_Course
+from courses.models import Course, Student, StudentTakenCourse
 from django.urls import reverse
 from unittest.mock import patch
 from courses.serializers import StudentSerializer

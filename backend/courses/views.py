@@ -13,10 +13,23 @@ from .recommendor.recommendor import Recommendor
 import json
 
 class ParseCourseDictAPIView(APIView):
+    """
+    API endpoint for parsing and updating a student's course dictionary.
+
+    Permission Classes:
+        - IsAuthenticated: Only authenticated users can access this view.
+    """
+    
     permission_classes = [permissions.IsAuthenticated]
     cs = Major.objects.filter(name__iexact="cs").first()
 
     def get(self, request):
+        """
+        Retrieve the course dictionary for the authenticated student.
+
+        Returns:
+            Response: Response containing the serialized student data.
+        """
         try:
             student = request.user.student
             course_dict = student.course_dict
@@ -27,6 +40,17 @@ class ParseCourseDictAPIView(APIView):
                             status=status.HTTP_404_NOT_FOUND)
 
     def post(self, request, *args, **kwargs):
+        """
+        Parse and update the course dictionary for the authenticated student.
+
+        Args:
+            request: The incoming HTTP request.
+            *args: Additional positional arguments.
+            **kwargs: Additional keyword arguments.
+
+        Returns:
+            Response: Response containing the serialized student data.
+        """
         update_course = request.data.get("updateCourse")
         course_dict = request.data.get('course_dict', '')
         parse_course = request.data.get('parseCourse', '')
@@ -47,9 +71,22 @@ class ParseCourseDictAPIView(APIView):
 
 
 class RecommendCourseAPIView(APIView):
+    """
+    API endpoint for recommending courses based on a student's course dictionary.
+
+    Permission Classes:
+        - IsAuthenticated: Only authenticated users can access this view.
+    """
+    
     permission_classes = [permissions.IsAuthenticated]
 
     def get(self, request):
+        """
+        Retrieve recommended courses based on the authenticated student's course dictionary.
+
+        Returns:
+            Response: Response containing the recommended courses.
+        """
         try:
             course_dict = request.user.student.course_dict
             identity = request.query_params.get('identity')
@@ -68,9 +105,26 @@ class RecommendCourseAPIView(APIView):
 
 
 class CourseDetailAPIView(APIView):
+    """
+    API endpoint for retrieving details of a specific course.
+
+    Permission Classes:
+        - AllowAny: No permission required to access this view.
+    """
+    
     permission_classes = [permissions.AllowAny]
 
     def get(self, request, id):
+        """
+        Retrieve details of a specific course.
+
+        Args:
+            request: The incoming HTTP request.
+            id (int): The ID of the course to retrieve.
+
+        Returns:
+            Response: Response containing the course details.
+        """
         try:
             course = Course.objects.get(id=id)
             prereqs = course.get_prereqs()
@@ -89,9 +143,26 @@ class CourseDetailAPIView(APIView):
 
 
 class MajorDetailAPIView(APIView):
+    """
+    API endpoint for retrieving details of a specific major.
+
+    Permission Classes:
+        - AllowAny: No permission required to access this view.
+    """
+    
     permission_classes = [permissions.AllowAny]
     
     def get(self, request, name):
+        """
+        Retrieve details of a specific major.
+
+        Args:
+            request: The incoming HTTP request.
+            name (str): The name of the major to retrieve.
+
+        Returns:
+            Response: Response containing the major details.
+        """
         try:
             print(name)
             major = Major.objects.filter(name__iexact=name).first()
@@ -103,9 +174,25 @@ class MajorDetailAPIView(APIView):
         
 
 class DisplayCoreAPIView(APIView):
+    """
+    API endpoint for displaying core courses based on location.
+
+    Permission Classes:
+        - AllowAny: No permission required to access this view.
+    """
+    
     permission_classes = [permissions.AllowAny]
     
     def get(self, request):
+        """
+        Retrieve core courses based on location.
+
+        Args:
+            request: The incoming HTTP request.
+
+        Returns:
+            Response: Response containing the core courses.
+        """
         loc = request.query_params.get('loc').lower()
         try:
             with open(f"courses/recommendor/{loc}_core_courses.json") as f:
