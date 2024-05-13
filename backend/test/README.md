@@ -23,3 +23,10 @@ python -m backend.test.test_parse
 ```
 
 There are six test cases. For detail information, you could refer to this [document](https://docs.google.com/document/d/1PjTqKO9xqlQ01Nr9J-HbJ1ROrG4NQ2DZoGMmcPNhbaY/edit)
+
+## To test api endpoints
+
+```bash
+cd SEproject/backend
+python3 manage.py test
+```
