@@ -59,6 +59,7 @@ Refer to [issue 12](https://github.com/YongyuLiu03/SEproject/issues/12#issuecomm
 
 ## Links
 
+- [Demo](https://drive.google.com/file/d/1v3aVM05oYBCJm-PCD60bsjpvIqtozwh1/view?usp=sharing)
 - [Group Project Folder](https://drive.google.com/drive/folders/1bN0Qwhw-A0KcsbxDqG4MjQsyJCyuXpMK?usp=sharing)
 - [Weekly Meeting Logs](https://docs.google.com/document/d/15pVdvmcztm7i7RDhoF95CvmVSybGwcfDFcdfjAZPFGc/edit?usp=sharing)
 - [SNOW (Functionality-Add)](https://github.com/YongyuLiu03/Snow)
