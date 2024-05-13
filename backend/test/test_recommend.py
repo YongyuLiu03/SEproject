@@ -15,12 +15,7 @@ def recommend(course_history, tense=False, identity='chinese'):
     
     graduate_valid, recommend_courses = recommendor.recommend()
 
-    # if not graduate_valid:
-    #     print("You cannot complete the CS major on a regular 4 courses per semester schedule, consider the overload or summer terms")
-    # else:
-    #     print(recommend_courses)
     return graduate_valid
-
 
 
 if __name__ == "__main__":
@@ -33,6 +28,9 @@ if __name__ == "__main__":
     graduate_valid = recommend(course_history, tense=False)
     assert graduate_valid == True, "Test Case 1.2 failed"
     graduate_valid = recommend(course_history, tense=False, identity='inter')
+    assert graduate_valid == True, "Test Case 1.3 failed"
+    graduate_valid = recommend(course_history, tense=True, identity='inter')
+    assert graduate_valid == True, "Test Case 1.4 failed"
 
     print('\n\n')
     
@@ -43,6 +41,10 @@ if __name__ == "__main__":
     assert graduate_valid == True, "Test Case 2.1 failed"
     graduate_valid = recommend(course_history, tense=False)
     assert graduate_valid == True, "Test Case 2.2 failed"
+    graduate_valid = recommend(course_history, tense=False, identity='inter')
+    assert graduate_valid == True, "Test Case 2.3 failed"
+    graduate_valid = recommend(course_history, tense=True, identity='inter')
+    assert graduate_valid == True, "Test Case 2.4 failed"
     print('\n\n')
 
     # test case 3: bf major that cannot transfer to cs
@@ -53,4 +55,7 @@ if __name__ == "__main__":
     assert graduate_valid == False, "Test Case 3.1 failed"
     graduate_valid = recommend(course_history, tense=False)
     assert graduate_valid == False, "Test Case 3.2 failed"
+    graduate_valid = recommend(course_history, tense=False, identity='inter')
+    assert graduate_valid == False, "Test Case 3.3 failed"
+    graduate_valid = recommend(course_history, tense=True, identity='inter')
     print('\n\n')
