@@ -6,6 +6,7 @@ from django.db.models import Sum
 # Create your models here.
 
 class Major(models.Model):
+    """ Major model """
     name = models.CharField(max_length=255)
     is_major = models.BooleanField(default=True)
     
@@ -20,6 +21,7 @@ class Major(models.Model):
 
 
 class Course(models.Model):
+    """ Course model """
     id = models.TextField(primary_key=True, max_length=255)
     name = models.TextField(max_length=255)
     credit = models.IntegerField(default=4)
@@ -45,6 +47,7 @@ class Course(models.Model):
 
 
 class MajorRequirement(models.Model):
+    """ Major requirement model """
     courses = models.ManyToManyField('Course', related_name='major_requirements')
     major = models.ForeignKey('Major', related_name='requirement', on_delete=models.CASCADE)
     elective = models.BooleanField(default=True)
@@ -57,6 +60,7 @@ class MajorRequirement(models.Model):
 
 
 class CoursePrereq(models.Model):
+    """ Course prerequisite model """
     course = models.ForeignKey('Course', on_delete=models.CASCADE, related_name='prereqs')
     prereqs = models.ManyToManyField('Course', related_name='required_by')
 
@@ -68,12 +72,14 @@ class CoursePrereq(models.Model):
 # Student related classes
 
 class StudentTakenCourse(models.Model):
+    """ Student taken course model """
     student = models.ForeignKey('Student', related_name='taken_courses', on_delete=models.CASCADE)
     course = models.ForeignKey('Course', related_name='course', on_delete=models.CASCADE)
     semester = models.TextField(max_length=20)
 
 
 class Student(models.Model):
+    """ Student model """
     class Level(models.IntegerChoices):
         NA = 0, "preschool"
         FR1 = 1, "freshman_1st"

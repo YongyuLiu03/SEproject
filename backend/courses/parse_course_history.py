@@ -1,4 +1,14 @@
 def parse_semester(semester, content):
+    """parse a semester.
+
+    Args:
+        semester (str): The semester.
+        content (list): The content of the semester.
+    
+    Returns:
+        list: The parsed semester.
+    """
+
     semester_lst = []
 
     # iterate through lines
@@ -37,6 +47,14 @@ def parse_semester(semester, content):
 
 
 def parse_course_history(text):
+    """parse course history.
+
+    Args:
+        text (str): The text of the course history.
+
+    Returns:
+        dict: The parsed course history.
+    """
     lst = text.split("\n")
 
     # invalid input
