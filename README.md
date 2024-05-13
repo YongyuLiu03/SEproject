@@ -16,7 +16,7 @@ Follow these steps to run the project
 
 1. install dependencies
 ``` 
-pip install django-cors-headers Django djangorestframework
+pip install django-cors-headers Django djangorestframework psycopg
 ```
 
 2. Wait for filling
