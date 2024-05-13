@@ -29,6 +29,12 @@ cd backend
 python manage.py migrate
 python manage.py runserver
 ```
+6. Run database upload script
+
+```bash
+cd courses
+python3 add_to_db.py
+```
 
 ## Frontend
 
