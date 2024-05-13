@@ -7,13 +7,39 @@ The contributors are [Yongyu Liu](https://github.com/YongyuLiu03), [Haocheng Yan
 ## How to run the software
 Follow these steps to run the project
 
+## Backend 
 1. install dependencies
 ``` 
 pip install django-cors-headers Django djangorestframework psycopg
 ```
 
-2. Wait for filling
+2. Database setup (Make sure you have PostgreSQL installed)
 
+    ```bash
+    createdb your_database_name
+    ```
+    
+4. Modify database settings in backend/se_project/settings.py
+
+
+5. Run migrations and start the Django development server:
+
+    ```bash
+    cd backend
+    python manage.py migrate
+    python manage.py runserver
+    ```
+
+## Frontend
+
+Before you begin, make sure you have Node.js and npm installed on your machine. You can download and install them from [here](https://nodejs.org/).
+
+
+```bash
+cd frontend
+npm install
+npm start
+```
 
 ## Run test cases
 
