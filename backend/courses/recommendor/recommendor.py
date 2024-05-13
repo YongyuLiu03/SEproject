@@ -10,10 +10,27 @@ django.setup()
 
 
 class RecommendorPreparer():
+    """The RecommendorPreparer class to prepare the courses for the students.
+
+    """
     def __init__(self):
+        """Initialize the RecommendorPreparer class.
+        """
         pass
     
     def check_core_taken(self, course_num, course_name, ny_core_courses, sh_core_courses, taken_map):
+        """ Check whether the core course is taken.
+
+        Args:
+            course_num (str): The course number.
+            course_name (str): The course name.
+            ny_core_courses (dict): The NY core courses.
+            sh_core_courses (dict): The SH core courses.
+            taken_map (dict): The taken map.
+
+        Returns:
+            int: The credits of the course.
+        """
         # clean the course number
         course_num_idx = course_num.find('-')
         course_num_idx = course_num[course_num_idx+1:].find('-') + course_num_idx
@@ -42,6 +59,17 @@ class RecommendorPreparer():
         return 0
 
     def filter_core_courses(self, course_history, ny_core_courses, sh_core_courses):
+        """Filter out the left core courses that need to be taken.
+
+        Args:
+            course_history (dict): The course history of the student.
+            ny_core_courses (dict): The NY core courses.
+            sh_core_courses (dict): The SH core courses.
+        
+        Returns:
+            list: The untaken core courses.
+        """
+
         core_map = {
             'Algorithmic Thinking': 'AT',
             'Experimental Discovery in the Natural World': 'ED',
@@ -82,6 +110,20 @@ class RecommendorPreparer():
         return untaken_core_courses
 
     def check_elective_taken(self, course_num, course_name, ny_elective_courses, sh_elective_courses, taken_elective):
+        """Check whether the elective course is taken.
+
+        Args:
+            course_num (str): The course number.
+            course_name (str): The course name.
+            ny_elective_courses (list): The NY elective courses.
+            sh_elective_courses (list): The SH elective courses.
+            taken_elective (list): The taken electives.
+
+        Returns:
+            None
+        """
+
+
         # clean the course number
         course_num_idx = course_num.find('-')
         course_num_idx = course_num[course_num_idx+1:].find('-') + course_num_idx
@@ -102,6 +144,16 @@ class RecommendorPreparer():
                     taken_elective.append(course_num)
 
     def filter_elective_courses(self, course_history, ny_electives, sh_electives):
+        """Filter out the left elective courses that need to be taken.
+
+        Args:
+            course_history (dict): The course history of the student.
+            ny_electives (list): The NY elective courses.
+            sh_electives (list): The SH elective courses.
+
+        Returns:
+            list: The taken electives.
+        """
         # store the taken electives
         taken_electives = []
         for _, taken_courses in course_history.items():
@@ -119,6 +171,20 @@ class RecommendorPreparer():
     def general_prepare(self, course_history, cs_major_courses, 
                         ny_core_courses, sh_core_courses,
                         ny_elective_courses, sh_elective_courses):
+        """General prepare the courses for the students.
+
+        Args:
+            course_history (dict): The course history of the student.
+            cs_major_courses (list): The CS major courses.
+            ny_core_courses (dict): The NY core courses.
+            sh_core_courses (dict): The SH core courses.
+            ny_elective_courses (list): The NY elective courses.
+            sh_elective_courses (list): The SH elective courses.
+
+        Returns:
+            tuple: The untaken core courses and taken electives.
+        """
+
         # filter out the left core courses that need to be taken
         """
         sample untaken_core_courses:
@@ -137,7 +203,19 @@ class RecommendorPreparer():
 
 
 class Recommendor():
+    """Recommendor class to recommend the courses for the students.
+    """
     def __init__(self, course_history, identity, tense=False):
+        """Initialize the Recommendor class.
+
+        Args:
+            course_history (dict): The course history of the student.
+            identity (str): The identity of the student.
+            tense (bool): Whether the student is in the tense mode (take as much electives as possible).
+        
+        Returns:
+            None
+        """
         # initialize the RecommendorPreparer
         self.recommendor_preparer = RecommendorPreparer()
 
@@ -183,6 +261,14 @@ class Recommendor():
         self.untaken_major_courses = self._init_recommend()
 
     def clean_course_number(self, course_number):
+        """Clean the course number.
+
+        Args:
+            course_number (str): The course number.
+        
+        Returns:
+            str: The cleaned course number.
+        """
         if course_number.count('-') == 1:
             return course_number
 
@@ -193,6 +279,11 @@ class Recommendor():
         return course_number[:course_num_idx] + course_number[course_num_idx+2:]
 
     def _init_recommend(self):
+        """Initialize the recommendor.
+
+        Returns:
+            list: The untaken major courses.
+        """
         semesters = list(self.course_history.keys())
         semesters.reverse()
 
@@ -216,6 +307,14 @@ class Recommendor():
         return untaken_major_courses
 
     def validate_elective(self, elective):
+        """ Validate the elective course.
+
+        Args:
+            elective (list): The elective course.
+        
+        Returns:
+            bool: Whether the elective course is valid.
+        """
         pre_reqs = elective[2]
         is_valid = True
 
@@ -234,6 +333,11 @@ class Recommendor():
         return is_valid
 
     def recommend(self):
+        """Recommend the courses for the students.
+
+        Returns:
+            bool: Whether the student can graduate.
+        """
         # load the ny core courses
         with open(os.path.join(settings.BASE_DIR, 'courses/recommendor/ny_core_courses.json'), 'r') as json_file:
             ny_core_courses = json.load(json_file)
