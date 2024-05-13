@@ -15,20 +15,20 @@ pip install django-cors-headers Django djangorestframework psycopg
 
 2. Database setup (Make sure you have PostgreSQL installed)
 
-    ```bash
-    createdb your_database_name
-    ```
+```bash
+createdb your_database_name
+```
     
 4. Modify database settings in backend/se_project/settings.py
 
 
 5. Run migrations and start the Django development server:
 
-    ```bash
-    cd backend
-    python manage.py migrate
-    python manage.py runserver
-    ```
+```bash
+cd backend
+python manage.py migrate
+python manage.py runserver
+```
 
 ## Frontend
 
