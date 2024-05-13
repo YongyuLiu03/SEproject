@@ -20,6 +20,11 @@ pip install django-cors-headers Django djangorestframework psycopg
 Go to [Test README](backend/test/README.md) for detail instruction to run tests
 
 
+## Tip for usage
+
+Refer to [issue 12](https://github.com/YongyuLiu03/SEproject/issues/12#issuecomment-2107356155) for the instruction to get the course history source code.
+
+
 ## Links
 
 - [Group Project Folder](https://drive.google.com/drive/folders/1bN0Qwhw-A0KcsbxDqG4MjQsyJCyuXpMK?usp=sharing)
