@@ -42,7 +42,7 @@ Before you begin, make sure you have Node.js and npm installed on your machine. 
 
 
 ```bash
-cd frontend
+cd frontend/myapp
 npm install
 npm start
 ```
