@@ -9,13 +9,14 @@ import NotFound from './components/NotFound';
 import Recommend from './components/RecCourses';
 import SignUp from './components/SignUp';
 import ParseCourse from './components/ParseCourse';
+import Navbar from './components/Navbar';
 
 
 const App = () => {
     return (
       
         <Router>
-            {/* <Main /> */}
+            <Navbar />
             <Routes>
                 <Route path="/" element={<Main />} /> 
                 <Route path="/login" element={<Login />} /> 

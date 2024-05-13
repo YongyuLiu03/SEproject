@@ -17,11 +17,11 @@ const Login = () => {
         console.log(response);
         login(response.data.token, username, response.data.coursesExist);
         alert("Logged in successfully");
-        navigate("/main");
+        navigate("/");
       })
       .catch((error) => {
         const errorMessage = error.response
-          ? error.response.data.message
+          ? error.response.data.error
           : error.message;
         alert(`Error: ${errorMessage}`);
       });

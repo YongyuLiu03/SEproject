@@ -3,27 +3,28 @@ import { useParams } from "react-router-dom";
 import axiosInstance from "../axiosInstance";
 
 const CourseDetail = () => {
-  const { courseNumber } = useParams();
+  const { name } = useParams();
   const [course, setCourse] = useState(null);
-
+  
+  console.log(name);
   useEffect(() => {
     axiosInstance
-      .get(`/courses/${courseNumber}`)
+      .get(`/courses/${name}`)
       .then((response) => {
         setCourse(response.data);
         console.log(response.data);
       })
       .catch((error) => console.error("Error fetching course details:", error));
-  }, [courseNumber]);
+  }, [name]);
 
   if (!course) {
-    return <div>Course {courseNumber} is not stored in our database :(</div>;
+    return <div>Course {name} is not stored in our database :(</div>;
   }
 
   return (
     <div>
       <h2>
-        {courseNumber} {course.course.name}
+        {name} {course.course.name}
       </h2>
       <p>
         <strong>Credits:</strong> {course.course.credit}

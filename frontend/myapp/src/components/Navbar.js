@@ -22,7 +22,7 @@ const Navbar = () => {
     <nav>
       <ul>
         <li>
-          <Link to="/main">Home</Link>
+          <Link to="/">Home</Link>
         </li>
 
         {username ? (

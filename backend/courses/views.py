@@ -89,10 +89,9 @@ class RecommendCourseAPIView(APIView):
         try:
             course_dict = request.user.student.course_dict
             identity = request.query_params.get('identity')
-            intense = request.query_params.get('intense')
-            if identity is not None and intense is not None:
-                recommendor = Recommendor(course_dict, identity, intense)
-                print(recommendor.recommend())
+            tense = request.query_params.get('intense')
+            if identity is not None and tense is not None:
+                recommendor = Recommendor(course_dict, identity, tense=False)
                 valid, recommend_courses = recommendor.recommend()
                 return Response({'valid': valid, 'recommend_courses': recommend_courses})
             else:
