@@ -54,9 +54,8 @@ class ParseCourseDictAPIView(APIView):
         update_course = request.data.get("updateCourse")
         course_dict = request.data.get('course_dict', '')
         parse_course = request.data.get('parseCourse', '')
-        print(course_dict)
-        print(parse_course)
         if parse_course: course_dict = parse_course_history(course_dict)
+        else: course_dict = json.loads(course_dict)        
         student, created = Student.objects.get_or_create(user=request.user)
         if created:
             student.major.add(self.cs)
@@ -93,13 +92,13 @@ class RecommendCourseAPIView(APIView):
             intense = request.query_params.get('intense')
             if identity is not None and intense is not None:
                 recommendor = Recommendor(course_dict, identity, intense)
+                print(recommendor.recommend())
                 valid, recommend_courses = recommendor.recommend()
                 return Response({'valid': valid, 'recommend_courses': recommend_courses})
             else:
                 return Response("Missing 'identity' or 'intense' parameter",
                                  status=status.HTTP_400_BAD_REQUEST)
         except ObjectDoesNotExist:
-            print("student or course_dict does not exist")
             return Response("student or course_dict does not exist",
                              status=status.HTTP_404_NOT_FOUND)
 
@@ -164,7 +163,6 @@ class MajorDetailAPIView(APIView):
             Response: Response containing the major details.
         """
         try:
-            print(name)
             major = Major.objects.filter(name__iexact=name).first()
             requirements = major.get_all_reqs()
             courses_list = [( req.count, "Elective" if req.elective else "Required", CourseSerializer(req.courses.all(), many=True).data) for req in requirements]
