@@ -19,17 +19,17 @@ pip install django-cors-headers Django djangorestframework psycopg
 createdb your_database_name
 ```
     
-4. Modify database settings in backend/se_project/settings.py
+3. Modify database settings in backend/se_project/settings.py
 
 
-5. Run migrations and start the Django development server:
+4. Run migrations and start the Django development server:
 
 ```bash
 cd backend
 python manage.py migrate
 python manage.py runserver
 ```
-6. Run database upload script
+5. Run database upload script
 
 ```bash
 cd courses
@@ -60,6 +60,7 @@ Refer to [issue 12](https://github.com/YongyuLiu03/SEproject/issues/12#issuecomm
 ## Links
 
 - [Demo](https://drive.google.com/file/d/1v3aVM05oYBCJm-PCD60bsjpvIqtozwh1/view?usp=sharing)
+- [Final Presentation Slide](https://docs.google.com/presentation/d/1vpf7T_7NjUDgSD1rGlHMp1ytkZDo7tJ1_dZYFPOm5eQ/edit?usp=sharing)
 - [Group Project Folder](https://drive.google.com/drive/folders/1bN0Qwhw-A0KcsbxDqG4MjQsyJCyuXpMK?usp=sharing)
 - [Weekly Meeting Logs](https://docs.google.com/document/d/15pVdvmcztm7i7RDhoF95CvmVSybGwcfDFcdfjAZPFGc/edit?usp=sharing)
 - [SNOW (Functionality-Add)](https://github.com/YongyuLiu03/Snow)
